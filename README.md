@@ -1,77 +1,51 @@
 # FRACASSO_MORVAN_AVC_dossier
 
-#  I. Introduction
+#  **I. Introduction**
 
 
 
 
-# II. Analyse exploratoire
-## II.1. Variable dépendante 
-## II.2. Variable explicatives
+# **II. Analyse exploratoire**
+## *II.1. Variable dépendante* 
+## *II.2. Variable explicatives*
 ### II.2.A. Analyse univariée
 ### II.2.B. Analyse bivariée
-## II.3. Types de variables
+## *II.3. Types de variables*
 
 <img width="1091" alt="Capture d’écran 2023-02-07 à 18 29 35" src="https://user-images.githubusercontent.com/118168094/217335053-80b0d207-f725-4bc2-951d-e4785330e23e.png">
 
 
-# III. Préparation de la base de données
-## III.1. Nettoyage des données
+# **III. Préparation de la base de données**
+## *III.1. Nettoyage des données*
 ### III.1.A. Valeurs manquantes
 ### III.1.B. Points atypiques
 ### III.1.C. Dichotomisation
-## III.2. Sélection des variables
+## *III.2. Sélection des variables*
 ### III.2.A. Tests entre Stroke et les variables explicatives
 #### III.2.A.1. Variables quantitatives
 #### III.2.A.2. Variables qualitatives
 ### III.2.B. Tests entre les variables explicatives 
 #### III.2.B.1. Variables qualitatives
 #### III.2.B.2. Variables quantitatives
-## III.3. Standardisation
+## *III.3. Standardisation*
 
-# IV. Modélisation
-## IV.1. SVM
+# **IV. Modélisation**
+## *IV.1. SVM*
+## *IV.2. Réseau de neuronnes* 
 
-`X_train_sc=pd.DataFrame(X_train_sc2)`
-
-`X_test_sc=pd.DataFrame(X_test_sc2)`
-
-`#Regression logistique`
-`lgr = LogisticRegression( random_state=0)`
-`lgr.fit(X_train_sc, y_train)`
-`y_pred_lgr=lgr.predict(X_test_sc)`
-
-`#Linear SVM`
-`l_SVC = LinearSVC(random_state=0, max_iter=2000)`
-`l_SVC.fit(X_train_sc, y_train)`
-`y_pred_lsvc=l_SVC.predict(X_test_sc)`
-
-`#la différence entre linear svc et svc avec kernel linear c'est qu'ils n'utilisent pas la même fonction de perte`
-`#SVM avec kernel lineaire`
-`svc = SVC(kernel='linear',random_state=0)`
-`svc.fit(X_train_sc,y_train)`
-`y_pred_svc=svc.predict(X_test_sc)`
-
-`#SVM avec kernel rbf`
-`svc_rbf = SVC(kernel='rbf',random_state=0)`
-`svc_rbf.fit(X_train_sc,y_train)`
-`y_pred_svc_rbf=svc_rbf.predict(X_test_sc)`
-
-`#SVM avec kernel poly`
-`svc_poly = SVC(kernel='poly',random_state=0)`
-`svc_poly.fit(X_train_sc,y_train)`
-`y_pred_svc_poly=svc_poly.predict(X_test_sc)`
-
-`#SGD classifier`
-`sgdc_svm = SGDClassifier(loss='hinge' ,random_state=0)`
-`sgdc_svm.fit(X_train_sc, y_train)`
-`y_pred_sgd=sgdc_svm.predict(X_test_sc)`
+# **V. Conclusion**
 
 
 
 
-## IV.2. Réseau de neuronnes 
+Pour insérer des images. : 
 
-# V. Conclusion 
+Sur l'interface web de github, crée une issue (Issues > new issue) car sur cette interface tu peux y insérer des images (par exemple insère toutes celles qui te seront utiles dans ton readme). Une fois qu'elle est créée, tu peux faire un clic droit sur une des images et sélectionner "copier l'url de l'image"
 
+Passe maintenant sur ton readme.md, et à l'endroit que tu veux qu'une image apparaisse, écris ceci :
 
+![alt tag](url de ton image)
+
+par exemple
+
+![alt tag](https://cloud.githubusercontent.com/assets/3968618/9588666/d029268e-5029-11e5-8a0c-41ecd04207f4.png)
