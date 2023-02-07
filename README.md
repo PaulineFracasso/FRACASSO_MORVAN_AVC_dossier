@@ -193,11 +193,25 @@ Ces modèles ont été entainé avec toutes les valeurs d'hyper-paramètres par 
 
 ## *IV.3. Grid Search sur meilleurs modèles* 
 
-![alt tag](https://user-images.githubusercontent.com/118168120/217368328-1c8205ea-bc0f-4cc2-9bfb-f5660293d0f0.png)
+Le grid search permet de trouver les valeurs optimales des hyper-paramètres en testant différentes combinaisons d’hyperparamètres et comparer les performances.  Nous avons cherché à optimiser à la fois le nombre de couches cachées et le nombre de neurones présents dans les couches. 
 
-![alt tag](https://user-images.githubusercontent.com/118168120/217368323-3008f5b0-3082-4901-a6e7-dd0e1b3e0957.png)
+Pour le réseau de neuronnes nous avons testé une plage de 1 à 3 couches de neurones et une plage de valeurs de 5 valeurs concernant le nombre de neurones par couche (nous avons testé le nombre de neurones suivants : 10, 25 ,50, 75 et 100).
 
-![alt tag](https://user-images.githubusercontent.com/118168120/217368319-886b22a9-9b6d-48ae-9c44-48eb0e7309b6.png)
+<img width="420" alt="Capture d’écran 2023-02-08 à 00 44 43" src="https://user-images.githubusercontent.com/118168094/217392757-d7f4599e-766d-4e5c-b025-820f4ae44b40.png">
+
+
+Le tableau ci-dessus, nous indique les résultats obtenus par le grid search concernant le nombre d’hyper-paramètres à prendre en compte. Pour réaliser un modèle optimal nous devons prendre en compte 3 couches cachées ainsi que 100 neurones par couche.
+
+Ensuite, nous avons effectué le grid search pour le modèle SVM avec noyau rbf. Nous avons cherché à optimiser le paramètre C qui est un paramètre de régularisation permettant de contrôler la balance entre la maximisation de la marge et la minimisation de l’erreur de classification. Nous avons également cherché à optimiser gamma qui détermine l’influence de l’échantillon d’entrainement sur la classification. Les valeurs testées pour gamma sont : 0,01, 0,1, 0,5, 1, 2. Celles pour C sont : 1, 10 et 100. 
+
+
+<img width="491" alt="Capture d’écran 2023-02-08 à 00 45 14" src="https://user-images.githubusercontent.com/118168094/217392789-e1b4c27a-6212-44f8-b6a2-fbedcb66f554.png">
+
+Les résultats obtenus par le gridsearch concernant le SVM à noyau rbf se trouvent dans le tableau ci-dessus. Pour réaliser un modèle optimal nous devons prendre une valeur de C de 100 ainsi qu’une valeur pour gamma de 2. 
+
+
+<img width="679" alt="Capture d’écran 2023-02-08 à 00 45 45" src="https://user-images.githubusercontent.com/118168094/217392805-b0a262cd-322e-4358-8ef0-dff7336bdb8e.png">
+
 
 # **V. Conclusion**
 
