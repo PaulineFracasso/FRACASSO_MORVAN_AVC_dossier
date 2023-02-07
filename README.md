@@ -131,7 +131,7 @@ Après avoir vérifié que toutes nos variables sont importantes pour expliquer 
 #### III.2.B.1. Variables qualitatives
 
 
-![alt tag](https://user-images.githubusercontent.com/118168120/217387486-fa9cc12e-244f-4279-99f7-35933f5d4391.png)
+![alt tag](https://user-images.githubusercontent.com/118168120/217387506-c48bbf36-fd0a-4a64-a112-f877fc2a2ec2.png)
 
 La boucle ci-dessus nous permet d'étudier les liens de dépendance entre nos variables qualitatives avec le test de Khi-deux avec les p-values. Nous observons malheureusement que presque toutes nos variables sont dépendantes puisque leurs p-values sont toutes inférieures à 0,05 à l'exception de quelques pairs de variables. Pour ne pas perdre trop d'information, nous préférons les garder pour la suite de notre étude. 
 
