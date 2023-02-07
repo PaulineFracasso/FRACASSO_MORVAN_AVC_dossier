@@ -1,14 +1,18 @@
 # FRACASSO_MORVAN_AVC_dossier
 
 #  **I. Introduction**
-  En 2019 et selon l'organisation mondiale de la santé, 12.22 millions de personnes ont subit un AVC et 6.55 millions de personnes en sont décédés, faisant de ce dernier la deuxième cause de décès dans le monde. L'AVC, accident vasculaire cérébral aussi appellé ataque, apparaît lorsque la circulation sanguine est interrompue par un vaisseau sanguin bouché (AVC ishémique) ou encore un vaisseau sanguin rompu (AVC hémorragique). Les signes d'alertes sont une apparition soudaine et brutale d'une déformation de la bouche, une faiblesse d'un côté du corps ou encore des troubles de la parole. En cas d'attaque, le risque de décès est élevé et si celui-çi n'entraîne pas la mort, il peut causer des repercussions à long terme comme la perte de vue et de parole ou encore une paralysie. Selon l'INSERM, le meilleur moyen de lutter contre les AVC est la prévention dite "première" c'est-à-dire sur le dépistage et le contrôle des risques vasculaires : la pression artérielle, le niveau de cholestérol, le diabète, l'obésité, la consommation d'alcool, le tabagisme ou encore la sédentarité. 
+
+En 2019 et selon l'organisation mondiale de la santé, 12.22 millions de personnes ont subit un AVC et 6.55 millions de personnes en sont décédés, faisant de ce dernier la deuxième cause de décès dans le monde. L'AVC, accident vasculaire cérébral aussi appellé ataque, apparaît lorsque la circulation sanguine est interrompue par un vaisseau sanguin bouché (AVC ishémique) ou encore un vaisseau sanguin rompu (AVC hémorragique). Les signes d'alertes sont une apparition soudaine et brutale d'une déformation de la bouche, une faiblesse d'un côté du corps ou encore des troubles de la parole. En cas d'attaque, le risque de décès est élevé et si celui-çi n'entraîne pas la mort, il peut causer des repercussions à long terme comme la perte de vue et de parole ou encore une paralysie. Selon l'INSERM, le meilleur moyen de lutter contre les AVC est la prévention dite "première" c'est-à-dire sur le dépistage et le contrôle des risques vasculaires : la pression artérielle, le niveau de cholestérol, le diabète, l'obésité, la consommation d'alcool, le tabagisme ou encore la sédentarité. 
 
 Dans cette analyse, nous allons nous servir d'une base de données issue de Kaggle contenant 40910 observations dans l'objectif de prévoir ces accidents vasculaires cérébraux avec plusieurs facteurs d'influences. Cette base de données contient donc une variable à expliquer qui est de type binaire c'est-à-dire qu'elle prend 1 lorsque l'individu a subit un accident vasculaire cérébral et elle prend 0 lorsque cette personne n'a subit aucun accident. Nous avons également dans cette base dix variables explicatives dont trois variables quantitatives discrètes (l'âge, le taux de glucause et l'indice de masse corporelle), une variable catégorielle (la catégorie socio-professionnelle), et cinq variables binaires (l'hypertension, maladie cardiovasculaire, le fait d'être marié, la localisation, la cigarette).
 
 # **II. Analyse exploratoire**
+
 Afin d'augmenter nos connaissances sur les variables présentes dans la base de donnée, nous réalisons quelques statistiques descriptives. Dans un premier temps,nous commençons par faire une analyse univariée de notre variable dépendante ainsi que de nos variables explicatives. Dans un deuxième temps, afin
 d'avoir un apriori sur les relations existentes entre les variables explicatives et notre variable à expliquer qualitatives, nous réalisons une analyse bivariée. 
+
 ## *II.1. Analyse univariée* 
+
 ### II.1.A. Variable dépendante
 
 ![alt tag](https://user-images.githubusercontent.com/118168120/217350749-cb924c7b-afb4-496b-b2ef-6cb248b79abc.png)
@@ -91,6 +95,7 @@ Après avoir analyser nos variables une à une puis les relations existantes ent
 ## *III.1. Nettoyage des données*
 
 Dans cette première petite analyse, nous observons des anomalies en ce qui concerne la variable "sex". Premièrement, nous observons avec la fonction info() que cette variable est de type float alors qu'elle devrait être de type integer, de plus nous constations qu'elle ne comporte que 40907 valeurs numériques alors que les autres variables comportent 40910 valeurs numériques. Deuxièmement, lorsque nous essayons de transformer cette variable sous format integer, cela ne marche pas. Nous supposons que ce problême est dû au fait que cette variable comporte surement des valeurs atypiques. Nous passons donc directement à la suppression des valeurs atypiques dans notre base de données.
+
 ### III.1.A. Valeurs manquantes
 
 Nous avons vérifier si nos variables comportaient des valeurs manquantes en faisant la somme des NA de chaque colonne. Nous avons donc remarqué que la variable "sex" possèdait trois valeurs manquantes. Nous avons donc supprimer les trois individus ayant n'ayant pas répondu à la variable "sex" et nous sommes arrivé une base de données comportant 40907 observations. La transformation de la variable en integer est devenu possible. À présent, nous passons à l'analyse des points atypiques afin de supprimer les points extrêmes afin qu'ils n'influent pas trop fortement nos estimations.
@@ -128,6 +133,7 @@ La boucle ci-dessus nous affiche les p-values à l'issu du test de Khi-deux des 
 ### III.2.B. Tests entre les variables explicatives 
 
 Après avoir vérifié que toutes nos variables sont importantes pour expliquer notre variable dépendantes, nous regardons les liens existentes entre les variables explicatives. Pour les variables qualitatives, nous nous référons également au test de Khi-deux afin de voir si il existe des relations d'indépendances entre nos variables, s'il en existe une nous ne pouvons pas introduire les deux mêmes variables dans un même modèle. Ensuite, nous utilisons le test au rang de spearman avec une matrice de corrélation afin de voir si il n'existe pas de corrélations trop fortes entre nos variables sinon nous devrions supprimer une variable. 
+
 #### III.2.B.1. Variables qualitatives
 
 
@@ -136,6 +142,7 @@ Après avoir vérifié que toutes nos variables sont importantes pour expliquer 
 La boucle ci-dessus nous permet d'étudier les liens de dépendance entre nos variables qualitatives avec le test de Khi-deux avec les p-values. Nous observons malheureusement que presque toutes nos variables sont dépendantes puisque leurs p-values sont toutes inférieures à 0,05 à l'exception de quelques pairs de variables. Pour ne pas perdre trop d'information, nous préférons les garder pour la suite de notre étude. 
 
 #### III.2.B.2. Variables quantitatives
+
 À présent, nous nous passons à l'analyse de relations entre les variables quantitatives grâce à la matrice de corrélation. Si les corrélations sont supérieures à 0,5, nous intégrerons pas ces variables dans un même modèle dans la partie modélisation.
 
 
@@ -152,6 +159,7 @@ Dans cette dernière partie de la préparation de nos données, nous séparons n
 Après avoir analysé et nettoyé notre base de données. Nous passons à la modélisation. Nous allons effectué 6 modèles qui sont des algorithmes de classification binaire. Nous déterminerons le/les meilleurs modèles et nous effectuons un grid search sur ces derniers afin d'améliorer leurs performances. 
 
 ## *IV.1. Modèles utilisés*
+
 Pour distinguer les cas d’AVC, de ceux qui ne le sont pas, nous avons utilisés plusieurs algorithmes de classification binaire. 
 
 Premièrement nous avons effectué une régression logistique.
@@ -184,6 +192,7 @@ Ces modèles ont été entainé avec toutes les valeurs d'hyper-paramètres par 
 
 
 ## *IV.3. Grid Search sur meilleurs modèles* 
+
 ![alt tag](https://user-images.githubusercontent.com/118168120/217368328-1c8205ea-bc0f-4cc2-9bfb-f5660293d0f0.png)
 
 ![alt tag](https://user-images.githubusercontent.com/118168120/217368323-3008f5b0-3082-4901-a6e7-dd0e1b3e0957.png)
