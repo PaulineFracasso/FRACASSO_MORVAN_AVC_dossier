@@ -127,10 +127,12 @@ La boucle ci-dessus nous permet d'étudier les liens de dépendance entre nos va
 À l'issu de la matrice de corrélation que les relations sont tous inférieures à 1 ce qui sihnififique qu'il existe presque aucune relation entre les variables quantitatives, nous pouvons donc garder les trois variables pour la suite de l'étude. En résumé, nous ne supprimons aucune variable pour la partie modélisation.
 
 ## *III.3. Standardisation*
-Dans cette dernière partie de la préparation de nos données, nous séparons notre jeu de données en base entraînement et base test, ensuite nous nous occupons de la standardisation de notre base d'entraînement afin de mettre toutes les variables sur la même échelle. Nous avons standardisé uniquement nos variables quantitatives puisque les variables binaires sont déjà centrés et réduits. 
+
+Dans cette dernière partie de la préparation de nos données, nous séparons notre jeu de données en base entraînement et base test. Ensuite nous standardisons nos variables explicatives quantitatives de notre jeu d'entrainement et de test. 
+
 # **IV. Modélisation**
 
-Afin d'arriver à cette dernière partie sur la modélisation, nous avons analysé et nettoyé notre base de données tout en standardisant nos données sur la base d'entraînement. Nous pouvons à présent passer à l'estimation de nos modèles. Nous réalisons dans un premier temps des SVM qui sont des machines à vecteurs de supports, nous avons estimé en tout six modèles : régression logistique, SVM linéaire, SVM kernel-linéaire, SVM kernel-polynomial, kernel RBF ainsi qu'un SGD Classifier. Dans un deuxième temps, nous estimons un réseau de neuronne et nous comparons à l'aide de mesures de précisions les résultats de ce modèle avec les SVM. Une fois que nous obtenons les modèles les plus performants, nous effectuons un grid search sur ces derniers afin d'améliorer leurs hyperparamètres et les rendre encore plus performants. 
+Après avoir analysé et nettoyé notre base de données. Nous passons à la modélisation. Nous allons effectué 6 modèles qui sont des algorithmes de classification binaire et un réseau de neuronne. Nous déterminerons le/les meilleurs modèles et nous effectuons un grid search sur ces derniers afin d'améliorer leurs performances. 
 
 ## *IV.1. Modèles utilisés*
 Pour distinguer les cas d’AVC, de ceux qui ne le sont pas, nous avons utilisés plusieurs algorithmes de classification binaire. 
