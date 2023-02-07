@@ -28,6 +28,45 @@
 
 # IV. Modélisation
 ## IV.1. SVM
+
+`X_train_sc=pd.DataFrame(X_train_sc2)`
+
+`X_test_sc=pd.DataFrame(X_test_sc2)`
+
+`#Regression logistique`
+`lgr = LogisticRegression( random_state=0)`
+`lgr.fit(X_train_sc, y_train)`
+`y_pred_lgr=lgr.predict(X_test_sc)`
+
+`#Linear SVM`
+`l_SVC = LinearSVC(random_state=0, max_iter=2000)`
+`l_SVC.fit(X_train_sc, y_train)`
+`y_pred_lsvc=l_SVC.predict(X_test_sc)`
+
+`#la différence entre linear svc et svc avec kernel linear c'est qu'ils n'utilisent pas la même fonction de perte`
+`#SVM avec kernel lineaire`
+`svc = SVC(kernel='linear',random_state=0)`
+`svc.fit(X_train_sc,y_train)`
+`y_pred_svc=svc.predict(X_test_sc)`
+
+`#SVM avec kernel rbf`
+`svc_rbf = SVC(kernel='rbf',random_state=0)`
+`svc_rbf.fit(X_train_sc,y_train)`
+`y_pred_svc_rbf=svc_rbf.predict(X_test_sc)`
+
+`#SVM avec kernel poly`
+`svc_poly = SVC(kernel='poly',random_state=0)`
+`svc_poly.fit(X_train_sc,y_train)`
+`y_pred_svc_poly=svc_poly.predict(X_test_sc)`
+
+`#SGD classifier`
+`sgdc_svm = SGDClassifier(loss='hinge' ,random_state=0)`
+`sgdc_svm.fit(X_train_sc, y_train)`
+`y_pred_sgd=sgdc_svm.predict(X_test_sc)`
+
+
+
+
 ## IV.2. Réseau de neuronnes 
 
 # V. Conclusion 
