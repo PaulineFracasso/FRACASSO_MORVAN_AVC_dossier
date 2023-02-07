@@ -3,8 +3,6 @@
 #  **I. Introduction**
 
 
-
-
 # **II. Analyse exploratoire**
 ## *II.1. Variable dépendante* 
 ## *II.2. Variable explicatives*
