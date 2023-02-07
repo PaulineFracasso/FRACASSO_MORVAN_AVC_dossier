@@ -123,6 +123,8 @@ La boucle ci-dessus permet de sortir les p-values du test de Mann-Withney. Ce de
 
 ![alt tag](https://user-images.githubusercontent.com/118168120/217387497-7c48b7d1-0b36-47b9-a6ae-5f2c30bda809.png)
 
+La boucle ci-dessus nous affiche les p-values à l'issu du test de Khi-deux des variables explicatives sur notre variable à prédire. Nous rappelons que l'hypothèse nulle est l'independance des variables entre-elles et l'hypothèse alternative est la dépendance entre ces deux variables. Si la p-value est inférieur à 0,05 alors l'hypothèse d'indépendance est rejetée et ces deux variables sont statistiquement liées. À l'issu de ce test, nous observons que les p-values sont toutes inférieures à 0,005, cela signifie qu'au seuil de 5% les variables explicatives sont statistiquements dépendantes avec la variable à prédire stroke. 
+
 ### III.2.B. Tests entre les variables explicatives 
 
 Après avoir vérifié que toutes nos variables sont importantes pour expliquer notre variable dépendantes, nous regardons les liens existentes entre les variables explicatives. Pour les variables qualitatives, nous nous référons également au test de Khi-deux afin de voir si il existe des relations d'indépendances entre nos variables, s'il en existe une nous ne pouvons pas introduire les deux mêmes variables dans un même modèle. Ensuite, nous utilisons le test au rang de spearman avec une matrice de corrélation afin de voir si il n'existe pas de corrélations trop fortes entre nos variables sinon nous devrions supprimer une variable. 
