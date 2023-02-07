@@ -80,6 +80,8 @@ Pour chaque graphique, le boxplot bleu représente la distribution des cas qui n
 
 En résumé, nous supposons que les variables age et taux de glycémie apportent de l'information en ce qui concerne la distinction des cas d'AVC et les cas inverses, tandis que la variable indice de masse corporelle apporte peu d'information dans la prédiction des cas d'AVC et les cas inverses. Ces hypothèses vont devoir être confirmer par la suite avec des tests.
 
+![alt tag](https://user-images.githubusercontent.com/118168120/217350803-cbb6bc7b-011b-438c-968b-e915850fdcea.png)
+
 Cette figure ci-dessus représente le nombre d'effectifs en fonction des variables catégorielles mais également en fonction des modalités que prennent la variable à prédire.
 
 # **III. Préparation de la base de données**
