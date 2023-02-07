@@ -124,15 +124,3 @@ Dans cette dernière partie de la préparation de nos données, nous séparons n
 # **V. Conclusion**
 
 
-
-
-Pour insérer des images. : 
-
-Sur l'interface web de github, crée une issue (Issues > new issue) car sur cette interface tu peux y insérer des images (par exemple insère toutes celles qui te seront utiles dans ton readme). Une fois qu'elle est créée, tu peux faire un clic droit sur une des images et sélectionner "copier l'url de l'image"
-
-Passe maintenant sur ton readme.md, et à l'endroit que tu veux qu'une image apparaisse, écris ceci :
-![alt tag](url de ton image)
-
-par exemple
-
-![alt tag](https://cloud.githubusercontent.com/assets/3968618/9588666/d029268e-5029-11e5-8a0c-41ecd04207f4.png)
