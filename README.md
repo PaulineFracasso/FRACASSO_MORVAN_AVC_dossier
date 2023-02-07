@@ -40,8 +40,7 @@ La figure ci-desus représente l'histogramme des trois variables quantitatives e
 > **Le niveau moyen de glycémie:** Nous nous intéressons dernièrement à l'histogramme représentant la distribution du niveau moyen de glycémie.  À priori, la variable ne semble pas normalement distribuée. Intéréssons nous au skewness et au kurtosis, le premier étant de 0,94 et le deuxième de -0,5, nous pouvons dire que la diribution est étalée à droité et moins aplatie qu'une distribution normale. 
 
 
-
-
+![alt tag](https://user-images.githubusercontent.com/118168120/217350769-32229fdd-e94b-4b6d-a3d2-f1ff575d92f7.png)
 
 La figure ci-desus représente l'effectif des modalités dans chaque variable catégorielle. Afin de mieux comprendre nos variables explicatives, nous allons expliquer ce que représente les valeurs pour chaque variable.
 
