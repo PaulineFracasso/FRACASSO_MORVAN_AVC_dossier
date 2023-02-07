@@ -141,7 +141,7 @@ La boucle ci-dessus nous permet d'étudier les liens de dépendance entre nos va
 
 ![alt tag](https://user-images.githubusercontent.com/118168120/217387520-39b40ad9-4e15-4a2d-8c1a-3bc9c2ff9da8.png)
 
-À l'issu de la matrice de corrélation que les relations sont tous inférieures à 1 ce qui sihnififique qu'il existe presque aucune relation entre les variables quantitatives, nous pouvons donc garder les trois variables pour la suite de l'étude. En résumé, nous ne supprimons aucune variable pour la partie modélisation.
+À l'issu de la matrice de corrélation que les relations sont tous inférieures à 1 ce qui signififique qu'il existe presque aucune relation entre les variables quantitatives, nous pouvons donc garder les trois variables pour la suite de l'étude. En résumé, nous ne supprimons aucune variable pour la partie modélisation.
 
 ## *III.3. Standardisation*
 
