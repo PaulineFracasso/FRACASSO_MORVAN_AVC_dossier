@@ -139,7 +139,7 @@ La boucle ci-dessus nous permet d'étudier les liens de dépendance entre nos va
 À présent, nous nous passons à l'analyse de relations entre les variables quantitatives grâce à la matrice de corrélation. Si les corrélations sont supérieures à 0,5, nous intégrerons pas ces variables dans un même modèle dans la partie modélisation.
 
 
-![alt tag](https://user-images.githubusercontent.com/118168120/217387486-fa9cc12e-244f-4279-99f7-35933f5d4391.png)
+![alt tag](https://user-images.githubusercontent.com/118168120/217387520-39b40ad9-4e15-4a2d-8c1a-3bc9c2ff9da8.png)
 
 À l'issu de la matrice de corrélation que les relations sont tous inférieures à 1 ce qui sihnififique qu'il existe presque aucune relation entre les variables quantitatives, nous pouvons donc garder les trois variables pour la suite de l'étude. En résumé, nous ne supprimons aucune variable pour la partie modélisation.
 
