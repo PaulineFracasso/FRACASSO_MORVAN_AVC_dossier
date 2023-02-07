@@ -132,13 +132,30 @@ Dans cette dernière partie de la préparation de nos données, nous séparons n
 
 Afin d'arriver à cette dernière partie sur la modélisation, nous avons analysé et nettoyé notre base de données tout en standardisant nos données sur la base d'entraînement. Nous pouvons à présent passer à l'estimation de nos modèles. Nous réalisons dans un premier temps des SVM qui sont des machines à vecteurs de supports, nous avons estimé en tout six modèles : régression logistique, SVM linéaire, SVM kernel-linéaire, SVM kernel-polynomial, kernel RBF ainsi qu'un SGD Classifier. Dans un deuxième temps, nous estimons un réseau de neuronne et nous comparons à l'aide de mesures de précisions les résultats de ce modèle avec les SVM. Une fois que nous obtenons les modèles les plus performants, nous effectuons un grid search sur ces derniers afin d'améliorer leurs hyperparamètres et les rendre encore plus performants. 
 
-## *IV.1. SVM*
-## *IV.2. Réseau de neuronnes* 
+## *IV.1. Modèles utilisés*
+Pour distinguer les cas d’AVC, de ceux qui ne le sont pas, nous avons utilisés plusieurs algorithmes de classification binaire. 
 
-## *IV.3. Comparaison des modèles* 
+Premièrement nous avons effectué une régression logistique.
+
+Ensuite nous avons effectués plusieurs algorithmes (SVM) qui utilisent des vecteurs de supports pour séparer les données en 2 classes. Ces vecteurs sont utilisés pour construire une frontière de décision (hyperplans) qui séparent les classes avec les plus grandes marges possibles. 
+Nous avons effectué 4 sortes de SVM différents :
+-	Un SVM linéaire 
+-	Un SVM à noyau linéaire 
+-	Un SVM à noyau polynomial 
+-	Un SVM à noyau RBF (radial basis function)
+Un SVM linéaire ne transforme pas les données d’entrée et utilise une fonction linéaire pour construire la frontière de décision en utilisant les variables d ‘entrée telles qu’elles. Les SVM à noyau, utilisent un noyau pour transformer les données d’entrée dans un espace de caractéristiques plus élevées, ce qui peut faciliter la séparation des données pour la classification binaire. En effet nous ne sommes pas certaines que nos données soient linéairement séparables. 
+
+De plus nous avons utilisé l’algorithme SGDClassifier, qui est basé sur la descente de gradient stochastique pour trouver les poids optimaux de chaque variables afin de minimiser l’erreur de classification. 
+
+Enfin nous avons utilisé un modèle de réseau de neurones feedforward. 
+
+## *IV.2. Comparaison des modèles* 
+
+Nous compararons les modèles avec 3 indicateurs afin de déterminer ceux qui ont les meilleurs performances. Ces indicateurs sont le Recall (qui identifie la proportion de résultats positifs bien identifiés), l’AUC (qui mesure la capacité des modèles à distinguer les prédictions positives et négatives) et le F1-score (qui permet de combiner le recall et la précision).
+
 ![alt tag](https://user-images.githubusercontent.com/118168120/217368307-5110f2b7-f240-406e-bfc8-c658eaf517c9.png)
 
-## *IV.4. Grid Search sur meilleurs modèles* 
+## *IV.3. Grid Search sur meilleurs modèles* 
 ![alt tag](https://user-images.githubusercontent.com/118168120/217368328-1c8205ea-bc0f-4cc2-9bfb-f5660293d0f0.png)
 
 ![alt tag](https://user-images.githubusercontent.com/118168120/217368323-3008f5b0-3082-4901-a6e7-dd0e1b3e0957.png)
