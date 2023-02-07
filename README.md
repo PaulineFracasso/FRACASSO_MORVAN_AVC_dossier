@@ -8,10 +8,12 @@ Dans cette analyse, nous allons nous servir d'une base de données issue de Kagg
 # **II. Analyse exploratoire**
 Afin d'augmenter nos connaissances sur les variables présentes dans la base de donnée, nous réalisons quelques statistiques descriptives. Dans un premier temps,nous commençons par faire une analyse univariée de notre variable dépendante ainsi que de nos variables explicatives. Dans un deuxième temps, afin
 d'avoir un apriori sur les relations existentes entre les variables explicatives et notre variable à expliquer qualitatives, nous réalisons une analyse bivariée. 
-## *II.1. Variable dépendante* 
+## *II.1. Analyse univariée* 
+### II.1.A. Variable dépendante
 Nous commençons par faire une analyse rapide de la variable qualitative à prédire qui prend 0 lorsque l'individi ne subit pas d'arrêt cardiaque vasculaire et qui prend 1 lorsque celui-çi en subit un. Nous observons que globalement la variable dépendante semble très bien répartie puisque nous observons que l'effectif de la catégorie 1 prend 20460 observations et l'effectif de la catégorie 0 prend 20450 observations. Ceçi nous affirme que 
 cette variable n'est pas déséquilibrée puisqu'il y'a autant d'effectifs dans la modalité 1 que dans la modalité 0. Nous n'allons donc pas devoir procéder par des techniques de sous ou sur échnatillonnage pour ajuster la distrbution des deux classes. Nous pouvons passer à la suite de l'analyse exploratoire en faisant quelques statistiques des variables explicatives. 
-## *II.2. Variable explicatives*
+
+### II.1.B. Variables explicatives
 
 Le tableau ci-dessus représente un récapitultaif des statistiques des trois variables explicatives. En effet, il rend compte du nombre total des valeurs que prennent ces variables, de leurs moyennes, médiances et écart-types. Il décrit également les valeurs minimums et maximums ainsi que leurs premiers et troisièmes quartiles. Nous pouvons explorer et analyser chaque variable indépendemment des autres: 
 
@@ -21,8 +23,8 @@ Le tableau ci-dessus représente un récapitultaif des statistiques des trois va
 et que 75% possèdent un indice 34,1. Nous pouvons supposer que plus l'indice de masse corporelle est élevé et plus le nombre de personnes subissant un AVC est important. 
 
 > **Le niveau moyen de glycémie:** Nous nous intéressons dernièrement au niveau moyen de glycémie de notre base de données. Comme pour les deux variables précédentes, nous observons un écart très important entre la valeur minimum et la valeur maximum du niveau moyen de glycémie ; la valeur minimum est de 55,12 tandis que la valeur maximum est de 271,74. Si nous nous intéressons à la moyenne et la médiane qui sont respectivement de 122,07 et de 97,92, nous pouvons dire que que la moyenne du niveau moyen de glycémie est de 122,07 et que 50% possédent un niveau moyen de glycémie égale à 97,92. En regardant de plus prés cet écart, nous pouvons supposer que s'il existe des valeurs atypiques, celles-çi se trouvent au dessus de la moyenne puisque celle-çi se trouve être au-dessus de la médiane. Intéressons nous désormais aux quartiles : comme le premier quartile est de 55,12 et le troisième quartile de 167,59 nous pouvons dire que 25% possèdent un niveau moyen de glycémie de 55,12 tandis que 75% en possèdent un de 167,59. Nous supposons que plus le niveau moyen de glycémie est élevé et plus le nombre de personnes atteintes d'un AVC est élevé. 
-### II.2.A. Analyse univariée
-### II.2.B. Analyse bivariée
+## *II.2. Analyse bivariée*
+
 ## *II.3. Types de variables*
 
 <img width="1091" alt="Capture d’écran 2023-02-07 à 18 29 35" src="https://user-images.githubusercontent.com/118168094/217335053-80b0d207-f725-4bc2-951d-e4785330e23e.png">
