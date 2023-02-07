@@ -12,6 +12,9 @@
 ### II.2.B. Analyse bivariée
 ## II.3. Types de variables
 
+<img width="1091" alt="Capture d’écran 2023-02-07 à 18 29 35" src="https://user-images.githubusercontent.com/118168094/217335053-80b0d207-f725-4bc2-951d-e4785330e23e.png">
+
+
 # III. Préparation de la base de données
 ## III.1. Nettoyage des données
 ### III.1.A. Valeurs manquantes
