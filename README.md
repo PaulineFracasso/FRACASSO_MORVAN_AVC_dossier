@@ -110,7 +110,11 @@ Précédemment, nous avons posé des hypothèses sur les liens existents entre l
 
 Le test de Student nous permet de tester cette hypothèse. Cependant, il faut répondre à deux conditions pour l’utiliser, à savoir la normalité de distribution des variables quantitatives, ainsi que l’égalité des variances. Si la première condition n’est pas respectée, il faudra passer par le test de Wilcoxon-Mann-Withney qui est un test non paramétrique puisqu'il n’a pas besoin de condition sur la distribution de probabilité au préalable. Nous commençons donc par effectué le test de Kolmogorov-smirnov afin de savoir si les variables quantitatives suivent une loi normale. 
 
+![alt tag](https://user-images.githubusercontent.com/118168120/217387486-fa9cc12e-244f-4279-99f7-35933f5d4391.png)
+
 La boucle ci-dessous permet de sortir les p-values de chaque variable associée au test de noramlité. Nous rappelons que ce test repose sur deux hypothèses ; l’hypothèse nulle (distribution gaussienne) et l’hypothèse alternative (distribution non gaussienne). Lorsque la p-value est inférieure à 0.05, l’hypothèse nulle est rejetée et ce qui signifie que la distribution est non gaussienne et que la variable ne suit pas une loi normale. Si les variables suivent une loi normale, nous utilisons alors le test de Bartlett pour vérifier l’égalité des variances, dans le cas contraire nous utilisons le test de la somme des rangs de Wilcoxon. Nous voyons, içi, que les p-values sont de 0 ce qui signifie que ces trois variables ne suivent pas une loi normale et nous devons effectué le test de Wilcoxon. 
+
+![alt tag](https://user-images.githubusercontent.com/118168120/217387486-fa9cc12e-244f-4279-99f7-35933f5d4391.png)
 
 La boucle ci-dessus permet de sortir les p-values du test de Mann-Withney. Ce dernier, comme le test de Student, utilise le rang de chaque observation afin de voir si les groupes sont issus de la même population, c’est-à-dire qu’ils ont une position équivalente. Lorsque la p-value est inférieure à 0.05, cela signifie que les moyennes des échantillons sont significativement différentes, et donc que les variables quantitatives possèdent une liaison avec la variable dépendante. Au vu des résultats qui sont de 0, nous pouvons dire que ces trois variables permettent d'expliquer la valeur que prend la variable à prédire. Nous sommes donc rassurés par rapport aux première hypothèses faites sur la variable "bmi". Nous conservons donc ces trois variables.
 #### III.2.A.2. Variables qualitatives
@@ -121,10 +125,17 @@ La boucle ci-dessus permet de sortir les p-values du test de Mann-Withney. Ce de
 
 Après avoir vérifié que toutes nos variables sont importantes pour expliquer notre variable dépendantes, nous regardons les liens existentes entre les variables explicatives. Pour les variables qualitatives, nous nous référons également au test de Khi-deux afin de voir si il existe des relations d'indépendances entre nos variables, s'il en existe une nous ne pouvons pas introduire les deux mêmes variables dans un même modèle. Ensuite, nous utilisons le test au rang de spearman avec une matrice de corrélation afin de voir si il n'existe pas de corrélations trop fortes entre nos variables sinon nous devrions supprimer une variable. 
 #### III.2.B.1. Variables qualitatives
+
+
+![alt tag](https://user-images.githubusercontent.com/118168120/217387486-fa9cc12e-244f-4279-99f7-35933f5d4391.png)
+
 La boucle ci-dessus nous permet d'étudier les liens de dépendance entre nos variables qualitatives avec le test de Khi-deux avec les p-values. Nous observons malheureusement que presque toutes nos variables sont dépendantes puisque leurs p-values sont toutes inférieures à 0,05 à l'exception de quelques pairs de variables. Pour ne pas perdre trop d'information, nous préférons les garder pour la suite de notre étude. 
 
 #### III.2.B.2. Variables quantitatives
 À présent, nous nous passons à l'analyse de relations entre les variables quantitatives grâce à la matrice de corrélation. Si les corrélations sont supérieures à 0,5, nous intégrerons pas ces variables dans un même modèle dans la partie modélisation.
+
+
+![alt tag](https://user-images.githubusercontent.com/118168120/217387486-fa9cc12e-244f-4279-99f7-35933f5d4391.png)
 
 À l'issu de la matrice de corrélation que les relations sont tous inférieures à 1 ce qui sihnififique qu'il existe presque aucune relation entre les variables quantitatives, nous pouvons donc garder les trois variables pour la suite de l'étude. En résumé, nous ne supprimons aucune variable pour la partie modélisation.
 
