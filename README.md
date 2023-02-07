@@ -57,7 +57,10 @@ La figure ci-desus représente l'effectif des modalités dans chaque variable ca
 > **Residence_type:**  Cette sixième variable représente la localisation de la personne concernée. Elle prend 0 lorsque l'individu habite dans une zone rurale et prend 1 lorsque l'individu habite dans une zone urbaine. 
 
 > **smoking_status:** Cette dernière variable représente le fait que l'individu fume ou non, cette dernière prend 0 lorsque ce denrier ne fume pas et prend 1 lorsque l'individu fume. 
+
 ## *II.2. Analyse bivariée*
+
+Nous commençons par regarder les distributions des variables âge, indice de masse corporelle et le niveau moyen de glycémie en fonction des deux modalités de la variable dépendante. 
 
 Les graphiques ci-dessus représentent les histogrammes des variables quantitatives. Sur chaque histogramme, nous avons la distinction entre les deux types d’évènements, en jaune sont représentés les cas d'observations ne subissant pas d'AVC et les cas d'AVC sont représentés en violet. Globalement, nous ne voyons pas des différences au sein des distributions pour les deux catégories. Nous regardons les deux distributions de chaque variable indépendemment des autres. 
 > **avg_glucose_level:**Pour la troisième variable, c'est-à-dire le niveau moyen de glycémie, nous remarquons sur la figure les distribution à gauches semblent différentes entre les cas d'AVC et ceux qui n'en subissent pas. En effet, la distribution des cas de non AVC est beaucoup plus élevée que la catégorie des ACV. Si nous nous intéressons à la partie droite de la distribution, nous remarquons qu'à l'inverse la distribution pour les cas d'AVC est plus élevée que celle des non AVC. Nous supposons donc que cette variable apporte de l'information qui permettrait de distinguer les cas d'AVC et les cas sains. 
