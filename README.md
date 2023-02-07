@@ -121,6 +121,8 @@ La boucle ci-dessus permet de sortir les p-values du test de Mann-Withney. Ce de
 
 À présent, nous essayons de voir s'il existe une relation entre nos variables qualitatives et notre variable à prédire. Comme ce sont des variables qualitatives, nous ne pouvons procéder au même test qu'auparavent. Nous devons utiliser le test de Khi-2 permettant de tester l'indépendance entre deux variables qualitatives. 
 
+![alt tag](https://user-images.githubusercontent.com/118168120/217387497-7c48b7d1-0b36-47b9-a6ae-5f2c30bda809.png)
+
 ### III.2.B. Tests entre les variables explicatives 
 
 Après avoir vérifié que toutes nos variables sont importantes pour expliquer notre variable dépendantes, nous regardons les liens existentes entre les variables explicatives. Pour les variables qualitatives, nous nous référons également au test de Khi-deux afin de voir si il existe des relations d'indépendances entre nos variables, s'il en existe une nous ne pouvons pas introduire les deux mêmes variables dans un même modèle. Ensuite, nous utilisons le test au rang de spearman avec une matrice de corrélation afin de voir si il n'existe pas de corrélations trop fortes entre nos variables sinon nous devrions supprimer une variable. 
