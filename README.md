@@ -155,16 +155,18 @@ Enfin nous avons utilisé un modèle de réseau de neurones feedforward.
 
 ## *IV.2. Comparaison des modèles* 
 
-Nous avons effectué une première cross validation avec 5 folds pour les 5 modèles suivants : SVM linéaire, les 3 SVM avec noyaux, ainsi que la regression logistique. 
-Les modèles svc avec un noyau rbf et polynomial ont les meilleurs score de précision en moyenne sur les 5 folds, mais le modèle svc avec noyau rbf est tout de même le meilleur, avec 78%. C'est également le modèle avec la variance la plus faible. De plus ces modèles ont été entainé avec toutes les valeurs d'hyper-paramètres par défauts (à part la régréssion logistique et le linéaire svc qui n'ont pas d'hyper-paramètres). Nous allons donc tuner notre svm avec noyaux rbf. 
+Nous avons effectué une première cross validation avec 5 folds pour les 5 modèles suivants : SVM linéaire, les 3 SVM avec noyaux, ainsi que la regression logistique. Le graphique ci-dessous représente le score de précision qui est le nombre de classifications correctes par rapport au nombre total de classifications, pour les 5 folds.
 
+<img width="583" alt="Capture d’écran 2023-02-07 à 23 46 23" src="https://user-images.githubusercontent.com/118168094/217384916-a746d20b-e7cd-496f-8fdd-c08f9a5056e7.png">
 
-
-
-
-Nous compararons les modèles avec 3 indicateurs afin de déterminer ceux qui ont les meilleurs performances. Ces indicateurs sont le Recall (qui identifie la proportion de résultats positifs bien identifiés), l’AUC (qui mesure la capacité des modèles à distinguer les prédictions positives et négatives) et le F1-score (qui permet de combiner le recall et la précision).
+Les modèles SVM avec un noyau rbf et polynomial ont les meilleurs score de précision en moyenne sur les 5 folds, mais le modèle svc avec noyau rbf est tout de même le meilleur, avec 78%. Le score de précision n'est pas forcément l'indicateur le plus fiable pour comparer des modèles, ainsi nous avons comparé les modèles avec 3 indicateurs afin de déterminer ceux qui ont les meilleurs performances. Ces indicateurs sont le Recall (qui identifie la proportion de résultats positifs bien identifiés), l’AUC (qui mesure la capacité des modèles à distinguer les prédictions positives et négatives) et le F1-score (qui permet de combiner le recall et la précision).
 
 ![alt tag](https://user-images.githubusercontent.com/118168120/217368307-5110f2b7-f240-406e-bfc8-c658eaf517c9.png)
+
+D'après les score dans le tableau, nous avons deux modèles qui ressortent ex aequo avec 78% pour les 3 indicateurs. Premièrement, nous retrouvons le SVM avec noyau rbf, qui était le plus performant en terme de précision précédemment. Puis nous retrouvons le réseau de neuronne.
+
+Ces modèles ont été entainé avec toutes les valeurs d'hyper-paramètres par défauts. Nous allons donc tuner nos 2 meilleurs modèles afin d'améliorer leur performances et de les départagés avec des hyper-paramètres optimaux.
+
 
 ## *IV.3. Grid Search sur meilleurs modèles* 
 ![alt tag](https://user-images.githubusercontent.com/118168120/217368328-1c8205ea-bc0f-4cc2-9bfb-f5660293d0f0.png)
