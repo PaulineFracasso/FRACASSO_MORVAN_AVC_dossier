@@ -10,6 +10,7 @@ Afin d'augmenter nos connaissances sur les variables présentes dans la base de 
 d'avoir un apriori sur les relations existentes entre les variables explicatives et notre variable à expliquer qualitatives, nous réalisons une analyse bivariée. 
 ## *II.1. Analyse univariée* 
 ### II.1.A. Variable dépendante
+![alt tag](https://github.com/PaulineFracasso/FRACASSO_MORVAN_AVC_dossier/issues/2#issue-1574935000)
 Nous commençons par faire une analyse rapide de la variable qualitative à prédire qui prend 0 lorsque l'individi ne subit pas d'arrêt cardiaque vasculaire et qui prend 1 lorsque celui-çi en subit un. Nous observons que globalement la variable dépendante semble très bien répartie puisque nous observons que l'effectif de la catégorie 1 prend 20460 observations et l'effectif de la catégorie 0 prend 20450 observations. Ceçi nous affirme que 
 cette variable n'est pas déséquilibrée puisqu'il y'a autant d'effectifs dans la modalité 1 que dans la modalité 0. Nous n'allons donc pas devoir procéder par des techniques de sous ou sur échnatillonnage pour ajuster la distrbution des deux classes. Nous pouvons passer à la suite de l'analyse exploratoire en faisant quelques statistiques des variables explicatives. 
 
@@ -58,7 +59,7 @@ Pour insérer des images. :
 Sur l'interface web de github, crée une issue (Issues > new issue) car sur cette interface tu peux y insérer des images (par exemple insère toutes celles qui te seront utiles dans ton readme). Une fois qu'elle est créée, tu peux faire un clic droit sur une des images et sélectionner "copier l'url de l'image"
 
 Passe maintenant sur ton readme.md, et à l'endroit que tu veux qu'une image apparaisse, écris ceci :
-
+https://github.com/PaulineFracasso/FRACASSO_MORVAN_AVC_dossier/issues/2#issue-1574935000
 ![alt tag](url de ton image)
 
 par exemple
