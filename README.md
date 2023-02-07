@@ -135,7 +135,8 @@ Dans cette dernière partie de la préparation de nos données, nous séparons n
 ![alt tag](https://user-images.githubusercontent.com/118168120/217368307-5110f2b7-f240-406e-bfc8-c658eaf517c9.png)
 
 ## *IV.3. Grid Search sur meilleurs modèles* 
-![alt tag](https://user-images.githubusercontent.com/118168120/217368307-5110f2b7-f240-406e-bfc8-c658eaf517c9.png)
+![alt tag](https://user-images.githubusercontent.com/118168120/217368328-1c8205ea-bc0f-4cc2-9bfb-f5660293d0f0.png)
+
 ![alt tag](https://user-images.githubusercontent.com/118168120/217368307-5110f2b7-f240-406e-bfc8-c658eaf517c9.png)
 
 ![alt tag](https://user-images.githubusercontent.com/118168120/217368319-886b22a9-9b6d-48ae-9c44-48eb0e7309b6.png)
