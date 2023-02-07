@@ -134,7 +134,7 @@ Dans cette dernière partie de la préparation de nos données, nous séparons n
 
 # **IV. Modélisation**
 
-Après avoir analysé et nettoyé notre base de données. Nous passons à la modélisation. Nous allons effectué 6 modèles qui sont des algorithmes de classification binaire et un réseau de neuronne. Nous déterminerons le/les meilleurs modèles et nous effectuons un grid search sur ces derniers afin d'améliorer leurs performances. 
+Après avoir analysé et nettoyé notre base de données. Nous passons à la modélisation. Nous allons effectué 6 modèles qui sont des algorithmes de classification binaire. Nous déterminerons le/les meilleurs modèles et nous effectuons un grid search sur ces derniers afin d'améliorer leurs performances. 
 
 ## *IV.1. Modèles utilisés*
 Pour distinguer les cas d’AVC, de ceux qui ne le sont pas, nous avons utilisés plusieurs algorithmes de classification binaire. 
@@ -154,6 +154,13 @@ De plus nous avons utilisé l’algorithme SGDClassifier, qui est basé sur la d
 Enfin nous avons utilisé un modèle de réseau de neurones feedforward. 
 
 ## *IV.2. Comparaison des modèles* 
+
+Nous avons effectué une première cross validation avec 5 folds pour les 5 modèles suivants : SVM linéaire, les 3 SVM avec noyaux, ainsi que la regression logistique. 
+Les modèles svc avec un noyau rbf et polynomial ont les meilleurs score de précision en moyenne sur les 5 folds, mais le modèle svc avec noyau rbf est tout de même le meilleur, avec 78%. C'est également le modèle avec la variance la plus faible. De plus ces modèles ont été entainé avec toutes les valeurs d'hyper-paramètres par défauts (à part la régréssion logistique et le linéaire svc qui n'ont pas d'hyper-paramètres). Nous allons donc tuner notre svm avec noyaux rbf. 
+
+
+
+
 
 Nous compararons les modèles avec 3 indicateurs afin de déterminer ceux qui ont les meilleurs performances. Ces indicateurs sont le Recall (qui identifie la proportion de résultats positifs bien identifiés), l’AUC (qui mesure la capacité des modèles à distinguer les prédictions positives et négatives) et le F1-score (qui permet de combiner le recall et la précision).
 
