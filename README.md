@@ -11,6 +11,8 @@ d'avoir un apriori sur les relations existentes entre les variables explicatives
 ## *II.1. Analyse univariée* 
 ### II.1.A. Variable dépendante
 
+![alt tag](https://user-images.githubusercontent.com/118168120/217350749-cb924c7b-afb4-496b-b2ef-6cb248b79abc.png)
+
 Nous commençons par faire une analyse rapide de la variable qualitative à prédire qui prend 0 lorsque l'individi ne subit pas d'arrêt cardiaque vasculaire et qui prend 1 lorsque celui-çi en subit un. Nous observons que globalement la variable dépendante semble très bien répartie puisque nous observons que l'effectif de la catégorie 1 prend 20460 observations et l'effectif de la catégorie 0 prend 20450 observations. Ceçi nous affirme que 
 cette variable n'est pas déséquilibrée puisqu'il y'a autant d'effectifs dans la modalité 1 que dans la modalité 0. Nous n'allons donc pas devoir procéder par des techniques de sous ou sur échnatillonnage pour ajuster la distrbution des deux classes. Nous pouvons passer à la suite de l'analyse exploratoire en faisant quelques statistiques des variables explicatives. 
 
