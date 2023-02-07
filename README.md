@@ -31,6 +31,18 @@ et que 75% possèdent un indice 34,1. Nous pouvons supposer que plus l'indice de
 
 ![alt tag](https://user-images.githubusercontent.com/118168120/217350758-a5494419-b534-460a-a95a-8fc0936031e7.png)
 
+La figure ci-desus représente l'histogramme des trois variables quantitatives et les deux prints représentent respectivement le skewness ainsi que le kurtosis de ces features. Le premier est le coefficient d’asymétrie de la distribution, il évalue le défaut de symétrie d’une distribution : il est nul pour une distribution symétrique, positif pour une distribution étalée à droite et négatif pour une distribution étalée à gauche. Le deuxième est le coefficient d’aplatissement de la distribution : il évalue le défaut d’aplatissement d’une distribution. Il est nul pour une distribution normale, négatif pour une distribution moins “aplatie” et positif pour une distribution davantage “aplatie” qu’une distribution normale. Ces trois choses vont nous donner une idée de la distribution des observations correspondant aux trois variables. Globalement, nous observons que seule la variable "âge" semble correctement distribuée, les deux autres variables quant à elles semblent anormalement distribués. À présent, intéressons-nous à chaque variable indépendemment des autres: 
+
+> **L'âge:** Nous nous intéressons d'abord à l'histogramme représentant la distribution de l'âge de nos individus. À priori, la variable semble bien distribuée. Intéréssons nous au skewness et au kurtosis, le premier est de -0.078 et le deuxième est de -0.8, ces deux sont assez proche de 0 mais négatifs ce qui sifnifie que la distribution est légèrement étalée à gauche et moins aplatie que la normale. 
+
+> **L'IMC(Indice de masse corporelle):** Intéressons nous ensuite à l'histogramme représentant la distribution de l'indice de masse corporelle. À priori, la variable ne semble pas normalement distribuée. Intéréssons nous au skewness et au kurtosis, le premier est de 1,077 et le deuxième est de 2.63, ces deux sont assez loins de 0 et positifs ce qui sifnifie que la distribution est étalée à droite  et moins aplatie que la normale. 
+
+> **Le niveau moyen de glycémie:** Nous nous intéressons dernièrement à l'histogramme représentant la distribution du niveau moyen de glycémie.  À priori, la variable ne semble pas normalement distribuée. Intéréssons nous au skewness et au kurtosis, le premier étant de 0,94 et le deuxième de -0,5, nous pouvons dire que la diribution est étalée à droité et moins aplatie qu'une distribution normale. 
+
+
+
+
+
 La figure ci-desus représente l'effectif des modalités dans chaque variable catégorielle. Afin de mieux comprendre nos variables explicatives, nous allons expliquer ce que représente les valeurs pour chaque variable.
 
 > **Sex:** Cette première variable représente le sexe de l'individu, celle-çi prend 0 lorsque l'individu est un homme et prend 1 lorsque l'individu est une femme. 
