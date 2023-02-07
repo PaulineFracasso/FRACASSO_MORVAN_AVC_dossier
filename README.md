@@ -131,6 +131,9 @@ Dans cette dernière partie de la préparation de nos données, nous séparons n
 # **IV. Modélisation**
 ## *IV.1. SVM*
 ## *IV.2. Réseau de neuronnes* 
+
+![alt tag](https://user-images.githubusercontent.com/118168120/217368307-5110f2b7-f240-406e-bfc8-c658eaf517c9.png)
+
 ## *IV.3. Grid Search sur meilleurs modèles* 
 # **V. Conclusion**
 
