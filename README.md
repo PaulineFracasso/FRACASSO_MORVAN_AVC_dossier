@@ -62,6 +62,9 @@ La figure ci-desus représente l'effectif des modalités dans chaque variable ca
 
 Nous commençons par regarder les distributions des variables âge, indice de masse corporelle et le niveau moyen de glycémie en fonction des deux modalités de la variable dépendante. 
 
+![alt tag](https://user-images.githubusercontent.com/118168120/217350783-84cc2d00-fba5-4344-b0fb-9de0a96b00d4.png)
+
+
 Les graphiques ci-dessus représentent les histogrammes des variables quantitatives. Sur chaque histogramme, nous avons la distinction entre les deux types d’évènements, en jaune sont représentés les cas d'observations ne subissant pas d'AVC et les cas d'AVC sont représentés en violet. Globalement, nous ne voyons pas des différences au sein des distributions pour les deux catégories. Nous regardons les deux distributions de chaque variable indépendemment des autres. 
 > **avg_glucose_level:**Pour la troisième variable, c'est-à-dire le niveau moyen de glycémie, nous remarquons sur la figure les distribution à gauches semblent différentes entre les cas d'AVC et ceux qui n'en subissent pas. En effet, la distribution des cas de non AVC est beaucoup plus élevée que la catégorie des ACV. Si nous nous intéressons à la partie droite de la distribution, nous remarquons qu'à l'inverse la distribution pour les cas d'AVC est plus élevée que celle des non AVC. Nous supposons donc que cette variable apporte de l'information qui permettrait de distinguer les cas d'AVC et les cas sains. 
 
