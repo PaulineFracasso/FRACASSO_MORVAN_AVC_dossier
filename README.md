@@ -15,14 +15,19 @@ d'avoir un apriori sur les relations existentes entre les variables explicatives
 
 ### II.1.A. Variable dépendante
 
+
+<p align="center">
 <img width="1430" alt="Capture d’écran 2023-02-08 à 15 19 43" src="https://user-images.githubusercontent.com/118168094/217556039-42a19a1f-d5c5-4328-bb05-10faf0e085c1.png">
+</p>
 
 Nous commençons par faire une analyse rapide de la variable qualitative à prédire qui prend 0 lorsque l'individi ne subit pas d'arrêt cardiaque vasculaire et qui prend 1 lorsque celui-çi en subit un. Nous observons que globalement la variable dépendante semble très bien répartie puisque nous observons que l'effectif de la catégorie 1 prend 20460 observations et l'effectif de la catégorie 0 prend 20450 observations. Ceçi nous affirme que 
 cette variable n'est pas déséquilibrée puisqu'il y'a autant d'effectifs dans la modalité 1 que dans la modalité 0. Nous n'allons donc pas devoir procéder par des techniques de sous ou sur échnatillonnage pour ajuster la distrbution des deux classes. Nous pouvons passer à la suite de l'analyse exploratoire en faisant quelques statistiques des variables explicatives. 
 
 ### II.1.B. Variables explicatives
 
-![alt tag](https://user-images.githubusercontent.com/118168120/217350756-e45dc746-cb90-4911-b3bd-e6bb50dc32df.png)
+<p align="center">
+<img width="429" alt="Capture d’écran 2023-02-08 à 15 49 42" src="https://user-images.githubusercontent.com/118168094/217563922-ad4ea162-0a82-46d4-bea2-83fccc2924f3.png">
+</p>
 
 Le tableau ci-dessus représente un récapitultaif des statistiques des trois variables explicatives. En effet, il rend compte du nombre total des valeurs que prennent ces variables, de leurs moyennes, médiances et écart-types. Il décrit également les valeurs minimums et maximums ainsi que leurs premiers et troisièmes quartiles. Nous pouvons explorer et analyser chaque variable indépendemment des autres: 
 
@@ -33,7 +38,9 @@ et que 75% possèdent un indice 34,1. Nous pouvons supposer que plus l'indice de
 
  **Le niveau moyen de glycémie:** Nous nous intéressons dernièrement au niveau moyen de glycémie de notre base de données. Comme pour les deux variables précédentes, nous observons un écart très important entre la valeur minimum et la valeur maximum du niveau moyen de glycémie ; la valeur minimum est de 55,12 tandis que la valeur maximum est de 271,74. Si nous nous intéressons à la moyenne et la médiane qui sont respectivement de 122,07 et de 97,92, nous pouvons dire que que la moyenne du niveau moyen de glycémie est de 122,07 et que 50% possédent un niveau moyen de glycémie égale à 97,92. En regardant de plus prés cet écart, nous pouvons supposer que s'il existe des valeurs atypiques, celles-çi se trouvent au dessus de la moyenne puisque celle-çi se trouve être au-dessus de la médiane. Intéressons nous désormais aux quartiles : comme le premier quartile est de 55,12 et le troisième quartile de 167,59 nous pouvons dire que 25% possèdent un niveau moyen de glycémie de 55,12 tandis que 75% en possèdent un de 167,59. Nous supposons que plus le niveau moyen de glycémie est élevé et plus le nombre de personnes atteintes d'un AVC est élevé. 
 
+<p align="center">
 <img width="1430" alt="Capture d’écran 2023-02-08 à 15 19 19" src="https://user-images.githubusercontent.com/118168094/217556189-214e38b1-4b6c-41dd-8875-835174993f96.png">
+</p>
 
 La figure ci-desus représente l'histogramme des trois variables quantitatives et les deux prints représentent respectivement le skewness ainsi que le kurtosis de ces features. Le premier est le coefficient d’asymétrie de la distribution, il évalue le défaut de symétrie d’une distribution : il est nul pour une distribution symétrique, positif pour une distribution étalée à droite et négatif pour une distribution étalée à gauche. Le deuxième est le coefficient d’aplatissement de la distribution : il évalue le défaut d’aplatissement d’une distribution. Il est nul pour une distribution normale, négatif pour une distribution moins “aplatie” et positif pour une distribution davantage “aplatie” qu’une distribution normale. Ces trois choses vont nous donner une idée de la distribution des observations correspondant aux trois variables. Globalement, nous observons que seule la variable "âge" semble correctement distribuée, les deux autres variables quant à elles semblent anormalement distribués. À présent, intéressons-nous à chaque variable indépendemment des autres: 
 
@@ -43,7 +50,9 @@ La figure ci-desus représente l'histogramme des trois variables quantitatives e
 
  **Le niveau moyen de glycémie:** Nous nous intéressons dernièrement à l'histogramme représentant la distribution du niveau moyen de glycémie.  À priori, la variable ne semble pas normalement distribuée. Intéréssons nous au skewness et au kurtosis, le premier étant de 0,94 et le deuxième de -0,5, nous pouvons dire que la diribution est étalée à droité et moins aplatie qu'une distribution normale. 
 
+<p align="center">
 <img width="1248" alt="Capture d’écran 2023-02-08 à 15 18 59" src="https://user-images.githubusercontent.com/118168094/217556311-95172a55-abad-409b-94b0-9dc5d57aa0c5.png">
+</p>
 
 La figure ci-desus représente l'effectif des modalités dans chaque variable catégorielle. Afin de mieux comprendre nos variables explicatives, nous allons expliquer ce que représente les valeurs pour chaque variable.
 
@@ -65,7 +74,9 @@ La figure ci-desus représente l'effectif des modalités dans chaque variable ca
 
 Nous commençons par regarder les distributions des variables âge, indice de masse corporelle et le niveau moyen de glycémie en fonction des deux modalités de la variable dépendante. 
 
+<p align="center">
 <img width="1428" alt="Capture d’écran 2023-02-08 à 15 18 33" src="https://user-images.githubusercontent.com/118168094/217556473-8cef10f8-0a85-4313-87f4-b0c8f567d00c.png">
+</p>
 
 Les graphiques ci-dessus représentent les histogrammes des variables quantitatives. Sur chaque histogramme, nous avons la distinction entre les deux types d’évènements, en jaune sont représentés les cas d'observations ne subissant pas d'AVC et les cas d'AVC sont représentés en violet. Globalement, nous ne voyons pas des différences au sein des distributions pour les deux catégories. Nous regardons les deux distributions de chaque variable indépendemment des autres. 
  **avg_glucose_level:** Pour la troisième variable, c'est-à-dire le niveau moyen de glycémie, nous remarquons sur la figure les distribution à gauches semblent différentes entre les cas d'AVC et ceux qui n'en subissent pas. En effet, la distribution des cas de non AVC est beaucoup plus élevée que la catégorie des ACV. Si nous nous intéressons à la partie droite de la distribution, nous remarquons qu'à l'inverse la distribution pour les cas d'AVC est plus élevée que celle des non AVC. Nous supposons donc que cette variable apporte de l'information qui permettrait de distinguer les cas d'AVC et les cas sains. 
@@ -76,13 +87,17 @@ Les graphiques ci-dessus représentent les histogrammes des variables quantitati
 
 Nous supposons donc que pour ces deux dernières variables, celles-çi apporteraient peu d'information concernant la distinction entre les deux catégories. Pour aller plus loin dans notre analyse, nous pouvons réaliser des boîtes à moustaches pour chaque variable en fonction des deux catégories. Nous pourrons voir les différences de répartition de façon plus précise.
 
+<p align="center">
 <img width="1428" alt="Capture d’écran 2023-02-08 à 15 18 15" src="https://user-images.githubusercontent.com/118168094/217556984-5cf3a9a7-c8fa-4218-8356-1004bdbfb7b2.png">
+</p>
 
 Pour chaque graphique, le boxplot bleu représente la distribution des cas qui ne subissent pas d'AVC et le boxplot orange représente celui de la distribution des cas d'AVC. Globalement, nous n'observons pas de différence significative entre les deux catégories notemment pour la variable d'indice de masse corporelle. Les médianes et les quartiles semblent très proches pour cette variable, en effet la médiane reste à trente peu importe la catégorie. En ce qui concerne la variable age, nous remarquons une légère différence, en effet la médiane pour les cas qui ne subissent pas d'AVC est de 50 environ tandis que celui des cas d'AVC est de 57 environ. Enfin, pour la variable taux de glycémie, nous observons une différence significative entre ces deux catégories que ce soit pour les médianes que pour les quartiles. En effet, la médiane pour les cas d'AVC semble plus élevée et les quartiles plus éloignés. 
 
 En résumé, nous supposons que les variables age et taux de glycémie apportent de l'information en ce qui concerne la distinction des cas d'AVC et les cas inverses, tandis que la variable indice de masse corporelle apporte peu d'information dans la prédiction des cas d'AVC et les cas inverses. Ces hypothèses vont devoir être confirmer par la suite avec des tests.
 
+<p align="center">
 <img width="1437" alt="Capture d’écran 2023-02-08 à 15 18 00" src="https://user-images.githubusercontent.com/118168094/217557044-db645f71-8b5e-4133-a0f0-56c4f3d3322d.png">
+</p>
 
 Cette figure ci-dessus représente le nombre d'effectifs en fonction des variables catégorielles mais également en fonction des modalités que prennent la variable à prédire.
 
@@ -100,7 +115,9 @@ Nous avons vérifier si nos variables comportaient des valeurs manquantes en fai
 
 ### III.1.B. Points atypiques
 
+<p align="center">
 <img width="1429" alt="Capture d’écran 2023-02-08 à 15 17 38" src="https://user-images.githubusercontent.com/118168094/217557090-5515a071-ccdc-4dc3-ab9e-f4a1790e5426.png">
+</p>
 
 À partir des boîtes à moustaches nous observons que sur les trois variables quantitatives, seulement une présente des valeurs plus extrêmes. L'âge et le taux de glycémie ne présentent aucune valeurs potentiellement atypique. Cependant, la variable "bmi"(indice de masse corporelle" présente des valeurs atypiques surtout pour les individus ayant un indice supérieure à 70. Si nous nous rappelons de notre première figure représente les boîtes à moustaches en fonction des deux catégories, nous remarquons que les valeurs extrêmes concernent notemment les individus n'avant pas subis d'accident vasculaire. Nous utilisons donc un test ESD (obtenu sur Github proposé par François) pour confirmer ou non la présence de valeurs extrêmes pour cette variable. À l'issu de ce test, nous observons que la variable "bmi" présente cinq valeurs atypiques qui figurent être au-dessus de 92, nous gardons donc seulement les individus pour lesqueles le niveau de masse corporelle est inférieur à 92.
 
@@ -120,19 +137,25 @@ Précédemment, nous avons posé des hypothèses sur les liens existents entre l
 
 Le test de Student nous permet de tester cette hypothèse. Cependant, il faut répondre à deux conditions pour l’utiliser, à savoir la normalité de distribution des variables quantitatives, ainsi que l’égalité des variances. Si la première condition n’est pas respectée, il faudra passer par le test de Wilcoxon-Mann-Withney qui est un test non paramétrique puisqu'il n’a pas besoin de condition sur la distribution de probabilité au préalable. Nous commençons donc par effectué le test de Kolmogorov-smirnov afin de savoir si les variables quantitatives suivent une loi normale. 
 
-<img width="448" alt="Capture d’écran 2023-02-08 à 15 30 21" src="https://user-images.githubusercontent.com/118168094/217559881-48e67e58-83c0-4c64-8677-f8f2ab7eba91.png">
+<p align="center">
+<img width="304" alt="Capture d’écran 2023-02-08 à 15 38 21" src="https://user-images.githubusercontent.com/118168094/217561689-a3d79066-0467-43e0-bf6d-4babeadecfb5.png">
+</p>
 
 La boucle ci-dessous permet de sortir les p-values de chaque variable associée au test de noramlité. Nous rappelons que ce test repose sur deux hypothèses ; l’hypothèse nulle (distribution gaussienne) et l’hypothèse alternative (distribution non gaussienne). Lorsque la p-value est inférieure à 0.05, l’hypothèse nulle est rejetée et ce qui signifie que la distribution est non gaussienne et que la variable ne suit pas une loi normale. Si les variables suivent une loi normale, nous utilisons alors le test de Bartlett pour vérifier l’égalité des variances, dans le cas contraire nous utilisons le test de la somme des rangs de Wilcoxon. Nous voyons, içi, que les p-values sont de 0 ce qui signifie que ces trois variables ne suivent pas une loi normale et nous devons effectué le test de Wilcoxon. 
 
-<img width="1079" alt="Capture d’écran 2023-02-08 à 15 30 45" src="https://user-images.githubusercontent.com/118168094/217559900-871842d9-04ab-4e46-b869-fb44891eb86e.png">
+<p align="center">
+<img width="948" alt="Capture d’écran 2023-02-08 à 15 38 30" src="https://user-images.githubusercontent.com/118168094/217561703-efd4aa49-ba86-49c7-8ec5-943518ba50ce.png">
+</p>
 
 La boucle ci-dessus permet de sortir les p-values du test de Mann-Withney. Ce dernier, comme le test de Student, utilise le rang de chaque observation afin de voir si les groupes sont issus de la même population, c’est-à-dire qu’ils ont une position équivalente. Lorsque la p-value est inférieure à 0.05, cela signifie que les moyennes des échantillons sont significativement différentes, et donc que les variables quantitatives possèdent une liaison avec la variable dépendante. Au vu des résultats qui sont de 0, nous pouvons dire que ces trois variables permettent d'expliquer la valeur que prend la variable à prédire. Nous sommes donc rassurés par rapport aux première hypothèses faites sur la variable "bmi". Nous conservons donc ces trois variables.
 
 #### III.2.A.2. Variables qualitatives
 
-À présent, nous essayons de voir s'il existe une relation entre nos variables qualitatives et notre variable à prédire. Comme ce sont des variables qualitatives, nous ne pouvons procéder au même test qu'auparavent. Nous devons utiliser le test de Khi-2 permettant de tester l'indépendance entre deux variables qualitatives. 
+À présent, nous essayons de voir s'il existe une relation entre nos variables qualitatives et notre variable à prédire. Comme ce sont des variables qualitatives, nous ne pouvons procéder au même test qu'auparavent. Nous devons utiliser le test de Khi-2 permettant de tester l'indépendance entre deux variables qualitatives.
 
-<img width="762" alt="Capture d’écran 2023-02-08 à 15 31 19" src="https://user-images.githubusercontent.com/118168094/217559984-aefd1c77-bb24-4616-86e9-f88e1710c1ba.png">
+<p align="center">
+<img width="599" alt="Capture d’écran 2023-02-08 à 15 38 43" src="https://user-images.githubusercontent.com/118168094/217561721-a88b99b2-a772-4fe7-b909-f4a7c0b87bfd.png">
+</p>
 
 La boucle ci-dessus nous affiche les p-values à l'issu du test de Khi-deux des variables explicatives sur notre variable à prédire. Nous rappelons que l'hypothèse nulle est l'independance des variables entre-elles et l'hypothèse alternative est la dépendance entre ces deux variables. Si la p-value est inférieur à 0,05 alors l'hypothèse d'indépendance est rejetée et ces deux variables sont statistiquement liées. À l'issu de ce test, nous observons que les p-values sont toutes inférieures à 0,005, cela signifie qu'au seuil de 5% les variables explicatives sont statistiquements dépendantes avec la variable à prédire stroke. 
 
@@ -142,8 +165,9 @@ Après avoir vérifié que toutes nos variables sont importantes pour expliquer 
 
 #### III.2.B.1. Variables qualitatives
 
-
-![alt tag](https://user-images.githubusercontent.com/118168120/217387506-c48bbf36-fd0a-4a64-a112-f877fc2a2ec2.png)
+<p align="center">
+<img width="722" alt="Capture d’écran 2023-02-08 à 15 38 58" src="https://user-images.githubusercontent.com/118168094/217561739-b83da1c5-dd5f-40c1-ad81-37b4aaf709cd.png">
+</p>
 
 La boucle ci-dessus nous permet d'étudier les liens de dépendance entre nos variables qualitatives avec le test de Khi-deux avec les p-values. Nous observons malheureusement que presque toutes nos variables sont dépendantes puisque leurs p-values sont toutes inférieures à 0,05 à l'exception de quelques pairs de variables. Pour ne pas perdre trop d'information, nous préférons les garder pour la suite de notre étude. 
 
@@ -151,8 +175,9 @@ La boucle ci-dessus nous permet d'étudier les liens de dépendance entre nos va
 
 À présent, nous nous passons à l'analyse de relations entre les variables quantitatives grâce à la matrice de corrélation. Si les corrélations sont supérieures à 0,5, nous intégrerons pas ces variables dans un même modèle dans la partie modélisation.
 
-
-![alt tag](https://user-images.githubusercontent.com/118168120/217387520-39b40ad9-4e15-4a2d-8c1a-3bc9c2ff9da8.png)
+<p align="center">
+<img width="718" alt="Capture d’écran 2023-02-08 à 15 58 27" src="https://user-images.githubusercontent.com/118168094/217566367-56154409-7f44-441b-ab3c-239a83de065f.png">
+</p>
 
 À l'issu de la matrice de corrélation que les relations sont tous inférieures à 1 ce qui signififique qu'il existe presque aucune relation entre les variables quantitatives, nous pouvons donc garder les trois variables pour la suite de l'étude. En résumé, nous ne supprimons aucune variable pour la partie modélisation.
 
@@ -186,11 +211,15 @@ Enfin nous avons utilisé un modèle de réseau de neurones feedforward.
 
 Nous avons effectué une première cross validation avec 5 folds pour les 5 modèles suivants : SVM linéaire, les 3 SVM avec noyaux, ainsi que la regression logistique. Le graphique ci-dessous représente le score de précision qui est le nombre de classifications correctes par rapport au nombre total de classifications, pour les 5 folds.
 
+<p align="center">
 <img width="583" alt="Capture d’écran 2023-02-07 à 23 46 23" src="https://user-images.githubusercontent.com/118168094/217384916-a746d20b-e7cd-496f-8fdd-c08f9a5056e7.png">
+</p>
 
 Les modèles SVM avec un noyau rbf et polynomial ont les meilleurs score de précision en moyenne sur les 5 folds, mais le modèle svc avec noyau rbf est tout de même le meilleur, avec 78%. Le score de précision n'est pas forcément l'indicateur le plus fiable pour comparer des modèles, ainsi nous avons comparé les modèles avec 3 indicateurs afin de déterminer ceux qui ont les meilleurs performances. Ces indicateurs sont le Recall (qui identifie la proportion de résultats positifs bien identifiés), l’AUC (qui mesure la capacité des modèles à distinguer les prédictions positives et négatives) et le F1-score (qui permet de combiner le recall et la précision).
 
-![alt tag](https://user-images.githubusercontent.com/118168120/217368307-5110f2b7-f240-406e-bfc8-c658eaf517c9.png)
+<p align="center">
+<img width="886" alt="Capture d’écran 2023-02-08 à 15 43 25" src="https://user-images.githubusercontent.com/118168094/217562466-49f706da-7e19-4377-a693-1260878ffc1a.png">
+</p>
 
 D'après les score dans le tableau, nous avons deux modèles qui ressortent ex aequo avec 78% pour les 3 indicateurs. Premièrement, nous retrouvons le SVM avec noyau rbf, qui était le plus performant en terme de précision précédemment. Puis nous retrouvons le réseau de neuronne.
 
@@ -203,22 +232,25 @@ Le grid search permet de trouver les valeurs optimales des hyper-paramètres en 
 
 Pour le réseau de neuronnes nous avons testé une plage de 1 à 3 couches de neurones et une plage de valeurs de 5 valeurs concernant le nombre de neurones par couche (nous avons testé le nombre de neurones suivants : 10, 25 ,50, 75 et 100).
 
+<p align="center">
 <img width="420" alt="Capture d’écran 2023-02-08 à 00 44 43" src="https://user-images.githubusercontent.com/118168094/217392757-d7f4599e-766d-4e5c-b025-820f4ae44b40.png">
-
+</p>
 
 Le tableau ci-dessus, nous indique les résultats obtenus par le grid search concernant le nombre d’hyper-paramètres à prendre en compte. Pour réaliser un modèle optimal nous devons prendre en compte 3 couches cachées ainsi que 100 neurones par couche.
 
 Ensuite, nous avons effectué le grid search pour le modèle SVM avec noyau rbf. Nous avons cherché à optimiser le paramètre C qui est un paramètre de régularisation permettant de contrôler la balance entre la maximisation de la marge et la minimisation de l’erreur de classification. Nous avons également cherché à optimiser gamma qui détermine l’influence de l’échantillon d’entrainement sur la classification. Les valeurs testées pour gamma sont : 0,01, 0,1, 0,5, 1, 2. Celles pour C sont : 1, 10 et 100. 
 
-
+<p align="center">
 <img width="491" alt="Capture d’écran 2023-02-08 à 00 45 14" src="https://user-images.githubusercontent.com/118168094/217392789-e1b4c27a-6212-44f8-b6a2-fbedcb66f554.png">
+</p>
 
 Les résultats obtenus par le gridsearch concernant le SVM à noyau rbf se trouvent dans le tableau ci-dessus. Pour réaliser un modèle optimal nous devons prendre une valeur de C de 100 ainsi qu’une valeur pour gamma de 2. 
 
 Pour terminer notre analyse, nous avons entrainé nos 2 modèles avec les hyper-paramètres optimaux. 
 
+<p align="center">
 <img width="679" alt="Capture d’écran 2023-02-08 à 00 45 45" src="https://user-images.githubusercontent.com/118168094/217392805-b0a262cd-322e-4358-8ef0-dff7336bdb8e.png">
-
+</p>
 
 
 # **V. Conclusion**
