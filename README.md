@@ -209,8 +209,10 @@ Ensuite, nous avons effectué le grid search pour le modèle SVM avec noyau rbf.
 
 Les résultats obtenus par le gridsearch concernant le SVM à noyau rbf se trouvent dans le tableau ci-dessus. Pour réaliser un modèle optimal nous devons prendre une valeur de C de 100 ainsi qu’une valeur pour gamma de 2. 
 
+Pour terminer notre analyse, nous avons entrainé nos 2 modèles avec les hyper-paramètres optimaux. 
 
 <img width="679" alt="Capture d’écran 2023-02-08 à 00 45 45" src="https://user-images.githubusercontent.com/118168094/217392805-b0a262cd-322e-4358-8ef0-dff7336bdb8e.png">
+
 
 
 # **V. Conclusion**
