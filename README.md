@@ -252,12 +252,25 @@ Pour terminer notre analyse, nous avons entrainé nos 2 modèles avec les hyper-
 <img width="679" alt="Capture d’écran 2023-02-08 à 00 45 45" src="https://user-images.githubusercontent.com/118168094/217392805-b0a262cd-322e-4358-8ef0-dff7336bdb8e.png">
 </p>
 
+Le tableau ci-dessus, répertorie les valeurs des 3 indicateurs pour le réseau de neurone et le SVM avec noyau rbf,  effectués avec les hyper-paramètres des grid-search. Nous observons que le SVM avec kernel rbf a un score légèrement plus élevé avec le recall (0,98 vs 0,96 pour le réseau de neurones). Cependant, sur le F1 score et l'AUC, le réseau de neuronnes obtient des valeurs plus élevée de 0,96% (vs 0,94 pour le SVM. Pour vérifier que nos modèles n'aient pas de sur-ajustement, nous avons également regardé ces 3 indicateurs sur le jeu train. 
+
+Nous obtenons les valeurs suivantes pour le SVM avec noyau rbf sur le jeu train :
+
+recall_svc_rbf  0.99
+f1 svc rbf  0.97
+auc svc rbf 0.97
+
+Ainsi que ces valeurs pour le réseau de neuronne sur le jeu train :
+Recall : 0.97
+F1 score : 0.97
+auc : 0.97
+
+Que ce soit pour le modèle SVM rbf et le réseau de neuronne, les valeurs obtenues avec le jeu d'entrainement sont légérement plus élevé mais restent très proches, ainsi le risque de sur ajustement est éloigné. 
+
+Notre meilleur modèle est donc le réseau de neuronne qui obtient des meilleurs valeurs pour 2 indicateurs sur 3, et qui a des valeurs plus proche entre celles obtenues par le jeu d'entrainement et le jeu test. 
+
 
 # **V. Conclusion**
 
 
-finir interprétation du meilleur modèle et dire qu'il n'y a aps de sur ajustement pcq on a regardé sur echantillon test. 
-faire la conlcusion
-enlever le code sur les graphs (boucles...)
-tout relire et corriger les fautes
-et revoir le code dans le markdown
+
