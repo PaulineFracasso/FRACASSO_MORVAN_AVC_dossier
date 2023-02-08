@@ -39,6 +39,9 @@ et que 75% possèdent un indice 34,1. Nous pouvons supposer que plus l'indice de
 
 <p align="center">
 <img width="1430" alt="Capture d’écran 2023-02-08 à 15 19 19" src="https://user-images.githubusercontent.com/118168094/217556189-214e38b1-4b6c-41dd-8875-835174993f96.png">
+  
+<img width="392" alt="Capture d’écran 2023-02-08 à 17 49 00" src="https://user-images.githubusercontent.com/118168094/217597008-d5fe812a-8272-4cd6-919e-d534e5d191a3.png">
+  
 </p>
 
 La figure ci-desus représente l'histogramme des trois variables quantitatives et les deux prints représentent respectivement le skewness ainsi que le kurtosis de ces features. Le premier est le coefficient d’asymétrie de la distribution, il évalue le défaut de symétrie d’une distribution : il est nul pour une distribution symétrique, positif pour une distribution étalée à droite et négatif pour une distribution étalée à gauche. Le deuxième est le coefficient d’aplatissement de la distribution : il évalue le défaut d’aplatissement d’une distribution. Il est nul pour une distribution normale, négatif pour une distribution moins “aplatie” et positif pour une distribution davantage “aplatie” qu’une distribution normale. Ces trois choses vont nous donner une idée de la distribution des observations correspondant aux trois variables. Globalement, nous observons que seule la variable "âge" semble correctement distribuée, les deux autres variables quant à elles semblent anormalement distribués. À présent, intéressons-nous à chaque variable indépendemment des autres: 
