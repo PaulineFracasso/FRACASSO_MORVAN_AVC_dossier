@@ -190,20 +190,22 @@ Dans cette dernière partie de la préparation de nos données, nous séparons n
 
 # **IV. Modélisation**
 
-Après avoir analysé et nettoyé notre base de données. Nous passons à la modélisation. Nous allons effectué 6 modèles qui sont des algorithmes de classification binaire. Nous déterminerons le/les meilleurs modèles et nous effectuons un grid search sur ces derniers afin d'améliorer leurs performances. 
+Après avoir analysé et nettoyé notre base de données. Nous passons à la modélisation. Nous allons effectuer 6 modèles qui sont des algorithmes de classification binaire. Nous déterminerons le/les meilleurs modèles et nous effectuerons un grid search sur ces derniers afin d'améliorer leurs performances. 
 
 ## *IV.1. Modèles utilisés*
 
-Pour distinguer les cas d’AVC, de ceux qui ne le sont pas, nous avons utilisés plusieurs algorithmes de classification binaire. 
+Pour distinguer les cas d’AVC, de ceux qui ne le sont pas, nous avons utilisé plusieurs modèles.
 
 Premièrement nous avons effectué une régression logistique.
 
-Ensuite nous avons effectués plusieurs algorithmes (SVM) qui utilisent des vecteurs de supports pour séparer les données en 2 classes. Ces vecteurs sont utilisés pour construire une frontière de décision (hyperplans) qui séparent les classes avec les plus grandes marges possibles. 
+Ensuite nous avons effectué plusieurs algorithmes (SVM) qui utilisent des vecteurs de supports pour séparer les données en 2 classes. Ces vecteurs sont utilisés pour construire une frontière de décision (hyperplans) qui séparent les classes avec les plus grandes marges possibles. 
 Nous avons effectué 4 sortes de SVM différents :
+
 -	Un SVM linéaire 
 -	Un SVM à noyau linéaire 
 -	Un SVM à noyau polynomial 
 -	Un SVM à noyau RBF (radial basis function)
+
 Un SVM linéaire ne transforme pas les données d’entrée et utilise une fonction linéaire pour construire la frontière de décision en utilisant les variables d ‘entrée telles qu’elles. Les SVM à noyau, utilisent un noyau pour transformer les données d’entrée dans un espace de caractéristiques plus élevées, ce qui peut faciliter la séparation des données pour la classification binaire. En effet nous ne sommes pas certaines que nos données soient linéairement séparables. 
 
 De plus nous avons utilisé l’algorithme SGDClassifier, qui est basé sur la descente de gradient stochastique pour trouver les poids optimaux de chaque variables afin de minimiser l’erreur de classification. 
@@ -212,7 +214,7 @@ Enfin nous avons utilisé un modèle de réseau de neurones feedforward.
 
 ## *IV.2. Comparaison des modèles* 
 
-Nous avons effectué une première cross validation avec 5 folds pour les 5 modèles suivants : SVM linéaire, les 3 SVM avec noyaux, ainsi que la regression logistique. Le graphique ci-dessous représente le score de précision qui est le nombre de classifications correctes par rapport au nombre total de classifications, pour les 5 folds.
+Nous avons effectué une première cross-validation avec 5 folds pour les 6 modèles suivants : SVM linéaire, les 3 SVM avec noyaux, ainsi que la regression logistique et le SGDClassifier. Le graphique ci-dessous représente le score de précision qui est le nombre de classifications correctes par rapport au nombre total de classifications, pour les 5 folds.
 
 <p align="center">
 <img width="583" alt="Capture d’écran 2023-02-07 à 23 46 23" src="https://user-images.githubusercontent.com/118168094/217384916-a746d20b-e7cd-496f-8fdd-c08f9a5056e7.png">
@@ -224,9 +226,9 @@ Les modèles SVM avec un noyau rbf et polynomial ont les meilleurs score de pré
 <img width="886" alt="Capture d’écran 2023-02-08 à 15 43 25" src="https://user-images.githubusercontent.com/118168094/217562466-49f706da-7e19-4377-a693-1260878ffc1a.png">
 </p>
 
-D'après les score dans le tableau, nous avons deux modèles qui ressortent ex aequo avec 78% pour les 3 indicateurs. Premièrement, nous retrouvons le SVM avec noyau rbf, qui était le plus performant en terme de précision précédemment. Puis nous retrouvons le réseau de neuronne.
+D'après les scores dans le tableau, nous avons deux modèles qui ressortent ex aequo avec 78% pour les 3 indicateurs. Premièrement, nous retrouvons le SVM avec noyau rbf, qui était le plus performant en terme de précision précédemment. Puis nous retrouvons le réseau de neuronne.
 
-Ces modèles ont été entainé avec toutes les valeurs d'hyper-paramètres par défauts. Nous allons donc tuner nos 2 meilleurs modèles afin d'améliorer leur performances et de les départagés avec des hyper-paramètres optimaux.
+Ces modèles ont été entainés avec des valeurs d'hyper-paramètres par défauts. Nous allons donc tuner nos 2 meilleurs modèles afin d'améliorer leur performances et de les départager avec des hyper-paramètres optimaux.
 
 
 ## *IV.3. Grid Search sur meilleurs modèles* 
