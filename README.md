@@ -218,3 +218,8 @@ Pour terminer notre analyse, nous avons entrainé nos 2 modèles avec les hyper-
 # **V. Conclusion**
 
 
+finir interprétation du meilleur modèle et dire qu'il n'y a aps de sur ajustement pcq on a regardé sur echantillon test. 
+faire la conlcusion
+enlever le code sur les graphs (boucles...)
+tout relire et corriger les fautes
+et revoir le code dans le markdown
