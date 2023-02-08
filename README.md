@@ -120,18 +120,19 @@ Précédemment, nous avons posé des hypothèses sur les liens existents entre l
 
 Le test de Student nous permet de tester cette hypothèse. Cependant, il faut répondre à deux conditions pour l’utiliser, à savoir la normalité de distribution des variables quantitatives, ainsi que l’égalité des variances. Si la première condition n’est pas respectée, il faudra passer par le test de Wilcoxon-Mann-Withney qui est un test non paramétrique puisqu'il n’a pas besoin de condition sur la distribution de probabilité au préalable. Nous commençons donc par effectué le test de Kolmogorov-smirnov afin de savoir si les variables quantitatives suivent une loi normale. 
 
-![alt tag](https://user-images.githubusercontent.com/118168120/217387486-fa9cc12e-244f-4279-99f7-35933f5d4391.png)
+<img width="448" alt="Capture d’écran 2023-02-08 à 15 30 21" src="https://user-images.githubusercontent.com/118168094/217559881-48e67e58-83c0-4c64-8677-f8f2ab7eba91.png">
 
 La boucle ci-dessous permet de sortir les p-values de chaque variable associée au test de noramlité. Nous rappelons que ce test repose sur deux hypothèses ; l’hypothèse nulle (distribution gaussienne) et l’hypothèse alternative (distribution non gaussienne). Lorsque la p-value est inférieure à 0.05, l’hypothèse nulle est rejetée et ce qui signifie que la distribution est non gaussienne et que la variable ne suit pas une loi normale. Si les variables suivent une loi normale, nous utilisons alors le test de Bartlett pour vérifier l’égalité des variances, dans le cas contraire nous utilisons le test de la somme des rangs de Wilcoxon. Nous voyons, içi, que les p-values sont de 0 ce qui signifie que ces trois variables ne suivent pas une loi normale et nous devons effectué le test de Wilcoxon. 
 
-![alt tag](https://user-images.githubusercontent.com/118168120/217387489-1945e5ce-8d9e-4a1e-af93-f8b69c941221.png)
+<img width="1079" alt="Capture d’écran 2023-02-08 à 15 30 45" src="https://user-images.githubusercontent.com/118168094/217559900-871842d9-04ab-4e46-b869-fb44891eb86e.png">
 
 La boucle ci-dessus permet de sortir les p-values du test de Mann-Withney. Ce dernier, comme le test de Student, utilise le rang de chaque observation afin de voir si les groupes sont issus de la même population, c’est-à-dire qu’ils ont une position équivalente. Lorsque la p-value est inférieure à 0.05, cela signifie que les moyennes des échantillons sont significativement différentes, et donc que les variables quantitatives possèdent une liaison avec la variable dépendante. Au vu des résultats qui sont de 0, nous pouvons dire que ces trois variables permettent d'expliquer la valeur que prend la variable à prédire. Nous sommes donc rassurés par rapport aux première hypothèses faites sur la variable "bmi". Nous conservons donc ces trois variables.
+
 #### III.2.A.2. Variables qualitatives
 
 À présent, nous essayons de voir s'il existe une relation entre nos variables qualitatives et notre variable à prédire. Comme ce sont des variables qualitatives, nous ne pouvons procéder au même test qu'auparavent. Nous devons utiliser le test de Khi-2 permettant de tester l'indépendance entre deux variables qualitatives. 
 
-![alt tag](https://user-images.githubusercontent.com/118168120/217387497-7c48b7d1-0b36-47b9-a6ae-5f2c30bda809.png)
+<img width="762" alt="Capture d’écran 2023-02-08 à 15 31 19" src="https://user-images.githubusercontent.com/118168094/217559984-aefd1c77-bb24-4616-86e9-f88e1710c1ba.png">
 
 La boucle ci-dessus nous affiche les p-values à l'issu du test de Khi-deux des variables explicatives sur notre variable à prédire. Nous rappelons que l'hypothèse nulle est l'independance des variables entre-elles et l'hypothèse alternative est la dépendance entre ces deux variables. Si la p-value est inférieur à 0,05 alors l'hypothèse d'indépendance est rejetée et ces deux variables sont statistiquement liées. À l'issu de ce test, nous observons que les p-values sont toutes inférieures à 0,005, cela signifie qu'au seuil de 5% les variables explicatives sont statistiquements dépendantes avec la variable à prédire stroke. 
 
