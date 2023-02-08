@@ -144,27 +144,27 @@ Le test de Student nous permet de tester cette hypothèse. Cependant, il faut r�
 <img width="304" alt="Capture d’écran 2023-02-08 à 15 38 21" src="https://user-images.githubusercontent.com/118168094/217561689-a3d79066-0467-43e0-bf6d-4babeadecfb5.png">
 </p>
 
-La boucle ci-dessous permet de sortir les p-values de chaque variable associée au test de normalité. Nous rappelons que ce test repose sur deux hypothèses: l’hypothèse nulle (distribution gaussienne) et l’hypothèse alternative (distribution non gaussienne). Lorsque la p-value est inférieure à 0.05, l’hypothèse nulle est rejetée,  ce qui signifie que la distribution est non gaussienne et que la variable ne suit pas une loi normale. Si les variables suivent une loi normale, nous utilisons alors le test de Bartlett pour vérifier l’égalité des variances, dans le cas contraire nous utilisons le test de la somme des rangs de Wilcoxon. Nous voyons, içi, que les p-values sont de 0 ce qui signifie que ces trois variables ne suivent pas une loi normale et nous devons effectué le test de Wilcoxon. 
+Nous retrouvons ci-dessus les p-values de chaque variable associée au test de normalité. Nous rappelons que ce test repose sur deux hypothèses: l’hypothèse nulle (distribution gaussienne) et l’hypothèse alternative (distribution non gaussienne). Lorsque la p-value est inférieure à 0.05, l’hypothèse nulle est rejetée,  ce qui signifie que la distribution est non gaussienne et que la variable ne suit pas une loi normale. Si les variables suivent une loi normale, nous utilisons alors le test de Bartlett pour vérifier l’égalité des variances, dans le cas contraire nous utilisons le test de la somme des rangs de Wilcoxon. Nous voyons, içi, que les p-values sont de 0 ce qui signifie que ces trois variables ne suivent pas une loi normale et nous devons effectué le test de Wilcoxon. 
 
 <p align="center">
 <img width="948" alt="Capture d’écran 2023-02-08 à 15 38 30" src="https://user-images.githubusercontent.com/118168094/217561703-efd4aa49-ba86-49c7-8ec5-943518ba50ce.png">
 </p>
 
-La boucle ci-dessus permet de sortir les p-values du test de Mann-Withney. Ce dernier, comme le test de Student, utilise le rang de chaque observation afin de voir si les groupes sont issus de la même population, c’est-à-dire qu’ils ont une position équivalente. Lorsque la p-value est inférieure à 0.05, cela signifie que les moyennes des échantillons sont significativement différentes, et donc que les variables quantitatives possèdent une liaison avec la variable dépendante. Au vu des résultats qui sont de 0, nous pouvons dire que ces trois variables permettent d'expliquer la valeur que prend la variable à prédire. Nous sommes donc rassurées par rapport aux première hypothèses faites sur la variable "bmi". Nous conservons donc ces trois variables.
+Ci-dessus nous retrouvons les p-values du test de Mann-Withney. Ce dernier, comme le test de Student, utilise le rang de chaque observation afin de voir si les groupes sont issus de la même population, c’est-à-dire qu’ils ont une position équivalente. Lorsque la p-value est inférieure à 0.05, cela signifie que les moyennes des échantillons sont significativement différentes, et donc que les variables quantitatives possèdent une liaison avec la variable dépendante. Au vu des résultats qui sont de 0, nous pouvons dire que ces trois variables permettent d'expliquer la valeur que prend la variable à prédire. Nous sommes donc rassurées par rapport aux première hypothèses faites sur la variable "bmi". Nous conservons donc ces trois variables.
 
 #### III.2.A.2. Variables qualitatives
 
-À présent, nous essayons de voir s'il existe une relation entre nos variables qualitatives et notre variable à prédire. Comme ce sont des variables qualitatives, nous ne pouvons procéder au même test qu'auparavent. Nous devons utiliser le test de Khi-2 permettant de tester l'indépendance entre deux variables qualitatives.
+À présent, nous essayons de voir s'il existe une relation entre nos variables qualitatives et notre variable à prédire. Nous devons utiliser le test de Khi-2 permettant de tester l'indépendance entre deux variables qualitatives.
 
 <p align="center">
 <img width="599" alt="Capture d’écran 2023-02-08 à 15 38 43" src="https://user-images.githubusercontent.com/118168094/217561721-a88b99b2-a772-4fe7-b909-f4a7c0b87bfd.png">
 </p>
 
-La boucle ci-dessus nous affiche les p-values à l'issu du test de Khi-deux des variables explicatives sur notre variable à prédire. Nous rappelons que l'hypothèse nulle est l'independance des variables entre-elles et l'hypothèse alternative est la dépendance entre ces deux variables. Si la p-value est inférieur à 0,05 alors l'hypothèse d'indépendance est rejetée et ces deux variables sont statistiquement liées. À l'issu de ce test, nous observons que les p-values sont toutes inférieures à 0,005, cela signifie qu'au seuil de 5% les variables explicatives sont statistiquements dépendantes avec la variable à prédire stroke. 
+Affichées ci-dessus, nous retrouvons les p-values du test de Khi-deux des variables explicatives sur notre variable à prédire. Nous rappelons que l'hypothèse nulle est l'indépendance des variables entre-elles et l'hypothèse alternative est la dépendance entre ces deux variables. Si la p-value est inférieur à 0,05 alors l'hypothèse d'indépendance est rejetée et ces deux variables sont statistiquement liées. À l'issu de ce test, nous observons que les p-values sont toutes inférieures à 0,05, cela signifie qu'au seuil de 5% les variables explicatives sont statistiquement dépendantes avec la variable à prédire stroke. 
 
 ### III.2.B. Tests entre les variables explicatives 
 
-Après avoir vérifié que toutes nos variables sont importantes pour expliquer notre variable dépendantes, nous regardons les liens existentes entre les variables explicatives. Pour les variables qualitatives, nous nous référons également au test de Khi-deux afin de voir si il existe des relations d'indépendances entre nos variables, s'il en existe une nous ne pouvons pas introduire les deux mêmes variables dans un même modèle. Ensuite, nous utilisons le test au rang de spearman avec une matrice de corrélation afin de voir si il n'existe pas de corrélations trop fortes entre nos variables sinon nous devrions supprimer une variable. 
+Après avoir vérifié que toutes nos variables soient importantes pour expliquer notre variable dépendantes, nous regardons les liens existant entre les variables explicatives. Pour les variables qualitatives, nous nous référons également au test de Khi-deux afin de voir si il existe des relations d'indépendances entre nos variables, s'il en existe une nous ne pouvons pas introduire les deux mêmes variables dans un même modèle. Ensuite, nous utilisons le test au rang de spearman avec une matrice de corrélation afin de voir si il n'existe pas de corrélations trop fortes entre nos variables sinon nous devrions supprimer une variable. 
 
 #### III.2.B.1. Variables qualitatives
 
@@ -172,21 +172,21 @@ Après avoir vérifié que toutes nos variables sont importantes pour expliquer 
 <img width="722" alt="Capture d’écran 2023-02-08 à 15 38 58" src="https://user-images.githubusercontent.com/118168094/217561739-b83da1c5-dd5f-40c1-ad81-37b4aaf709cd.png">
 </p>
 
-La boucle ci-dessus nous permet d'étudier les liens de dépendance entre nos variables qualitatives avec le test de Khi-deux avec les p-values. Nous observons malheureusement que presque toutes nos variables sont dépendantes puisque leurs p-values sont toutes inférieures à 0,05 à l'exception de quelques pairs de variables. Pour ne pas perdre trop d'information, nous préférons les garder pour la suite de notre étude. 
+Ci-dessus, nous retrouvons un extrait des résultats de notre test. (Nous avons mis qu'un extrait car la sortie prenait trop de place). D'apès les p-values ci-dessus, nous observons malheureusement que presque toutes nos variables sont dépendantes puisque leurs p-values sont toutes inférieures à 0,05 à l'exception de quelques pairs de variables. Pour ne pas perdre trop d'information, nous préférons les garder pour la suite de notre étude. 
 
 #### III.2.B.2. Variables quantitatives
 
-À présent, nous nous passons à l'analyse de relations entre les variables quantitatives grâce à la matrice de corrélation. Si les corrélations sont supérieures à 0,5, nous intégrerons pas ces variables dans un même modèle dans la partie modélisation.
+À présent, nous passons à l'analyse des relations entre les variables quantitatives grâce à la matrice de corrélation. Si les corrélations sont supérieures à 0,5, nous n'intégrerons pas ces variables dans un même modèle dans la partie modélisation.
 
 <p align="center">
 <img width="718" alt="Capture d’écran 2023-02-08 à 15 58 27" src="https://user-images.githubusercontent.com/118168094/217566367-56154409-7f44-441b-ab3c-239a83de065f.png">
 </p>
 
-À l'issu de la matrice de corrélation que les relations sont tous inférieures à 1 ce qui signififique qu'il existe presque aucune relation entre les variables quantitatives, nous pouvons donc garder les trois variables pour la suite de l'étude. En résumé, nous ne supprimons aucune variable pour la partie modélisation.
+À l'issu de la matrice ci-dessus, nous observons des corrélations toutes inférieures à 0,2 en valeur absolue. Nous pouvons donc garder les trois variables pour la suite de l'étude. En résumé, nous ne supprimons aucune variable pour la partie modélisation.
 
 ## *III.3. Standardisation*
 
-Dans cette dernière partie de la préparation de nos données, nous séparons notre jeu de données en base entraînement et base test. Ensuite nous standardisons nos variables explicatives quantitatives de notre jeu d'entrainement et de test. 
+Dans cette dernière partie de la préparation de nos données, nous séparons notre jeu de données en base d'entraînement et base de test. Ensuite nous standardisons nos variables explicatives quantitatives de notre jeu d'entrainement et de test. 
 
 # **IV. Modélisation**
 
