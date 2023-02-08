@@ -256,14 +256,15 @@ Le tableau ci-dessus, répertorie les valeurs des 3 indicateurs pour le réseau 
 
 Nous obtenons les valeurs suivantes pour le SVM avec noyau rbf sur le jeu train :
 
-recall_svc_rbf  0.99
-f1 svc rbf  0.97
-auc svc rbf 0.97
+- recall_svc_rbf  0.99
+- f1 svc rbf  0.97
+- auc svc rbf 0.97
 
 Ainsi que ces valeurs pour le réseau de neuronne sur le jeu train :
-Recall : 0.97
-F1 score : 0.97
-auc : 0.97
+
+- Recall : 0.97
+- F1 score : 0.97
+- auc : 0.97
 
 Que ce soit pour le modèle SVM rbf et le réseau de neuronne, les valeurs obtenues avec le jeu d'entrainement sont légérement plus élevé mais restent très proches, ainsi le risque de sur ajustement est éloigné. 
 
